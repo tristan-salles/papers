@@ -1,0 +1,788 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% AGUtmpl.tex: this template file is for articles formatted with LaTeX2e,
+% Modified July 2014
+%
+% This template includes commands and instructions
+% given in the order necessary to produce a final output that will
+% satisfy AGU requirements.
+%
+% PLEASE DO NOT USE YOUR OWN MACROS
+% DO NOT USE \newcommand, \renewcommand, or \def.
+%
+% FOR FIGURES, DO NOT USE \psfrag or \subfigure.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% All questions should be e-mailed to latex@agu.org.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Step 1: Set the \documentclass
+%
+% There are two options for article format: two column (default)
+% and draft.
+%
+% PLEASE USE THE DRAFT OPTION TO SUBMIT YOUR PAPERS.
+% The draft option produces double spaced output.
+%
+% Choose the journal abbreviation for the journal you are
+% submitting to:
+
+% jgrga JOURNAL OF GEOPHYSICAL RESEARCH
+% gbc   GLOBAL BIOCHEMICAL CYCLES
+% grl   GEOPHYSICAL RESEARCH LETTERS
+% pal   PALEOCEANOGRAPHY
+% ras   RADIO SCIENCE
+% rog   REVIEWS OF GEOPHYSICS
+% tec   TECTONICS
+% wrr   WATER RESOURCES RESEARCH
+% gc    GEOCHEMISTRY, GEOPHYSICS, GEOSYSTEMS
+% sw    SPACE WEATHER
+% ms    JAMES
+% ef    EARTH'S FUTURE
+% ea    EARTH AND SPACE SCIENCE
+%
+%
+%
+% (If you are submitting to a journal other than jgrga,
+% substitute the initials of the journal for "jgrga" below.)
+
+%\documentclass[draft,jgrga]{agutex2015}
+\documentclass[default,jgrga]{agutex2015}
+% To create numbered lines:
+
+% If you don't already have lineno.sty, you can download it from
+% http://www.ctan.org/tex-archive/macros/latex/contrib/ednotes/
+% (or search the internet for lineno.sty ctan), available at TeX Archive Network (CTAN).
+% Take care that you always use the latest version.
+
+% To activate the commands, uncomment \usepackage{lineno}
+% and \linenumbers*[1]command, below:
+
+% \usepackage{lineno}
+% \linenumbers*[1]
+%  To add line numbers to lines with equations:
+%  \begin{linenomath*}
+%  \begin{equation}
+%  \end{equation}
+%  \end{linenomath*}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Figures and Tables
+%
+%
+% DO NOT USE \psfrag or \subfigure commands.
+%
+%
+%  Uncomment the following command to include .eps files
+%  (comment out this line for draft format):
+%  \usepackage[dvips]{graphicx}
+%
+%  Uncomment the following command to allow illustrations to print
+%   when using Draft:
+%  \setkeys{Gin}{draft=false}
+%
+% Substitute one of the following for [dvips] above
+% if you are using a different driver program and want to
+% proof your illustrations on your machine:
+%
+% [xdvi], [dvipdf], [dvipsone], [dviwindo], [emtex], [dviwin],
+% [pctexps],  [pctexwin],  [pctexhp],  [pctex32], [truetex], [tcidvi],
+% [oztex], [textures]
+%
+% See how to enter figures and tables at the end of the article, after
+% references.
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  ENTER PREAMBLE
+%
+%% ------------------------------------------------------------------------ %%
+
+% Author names in capital letters:
+\authorrunninghead{SALLES ET AL.}
+
+% Shorter version of title entered in capital letters:
+\titlerunninghead{High-resolution modeling of Carbonate platform evolution}
+
+%Corresponding author mailing address and e-mail address:
+\authoraddr{Corresponding author: Tristan Salles,
+School of Geosciences, University of Sydney, Madsen Building, Sydney, NSW 2006, Australia.
+(tristan.salles@sydney.edu.au)}
+
+%\authoraddr{Corresponding author: A. B. Smith,
+%Department of Hydrology and Water Resources, University of
+%Arizona, Harshbarger Building 11, Tucson, AZ 85721, USA.
+%(a.b.smith@hwr.arizona.edu)}
+
+\begin{document}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  TITLE
+%
+%% ------------------------------------------------------------------------ %%
+
+
+\title{Exploring millennial responses of reefs to climatic forcing, insights from coupled wave and carbonate growth forward stratigraphic model}
+%
+% e.g., \title{Terrestrial ring current:
+% Origin, formation, and decay $\alpha\beta\Gamma\Delta$}
+%
+
+%% ------------------------------------------------------------------------ %%
+%
+%  AUTHORS AND AFFILIATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+
+%Use \author{\altaffilmark{}} and \altaffiltext{}
+\authors{T. Salles\altaffilmark{1}, J. Pall\altaffilmark{1}, J. Webster\altaffilmark{1}, A. Vila-Concejo\altaffilmark{1}, S. Duce\altaffilmark{1}, B. Dechnik\altaffilmark{1}}
+\altaffiltext{1}{School of Geosciences, University of Sydney, Sydney, NSW, Australia.}
+
+% \altaffilmark will produce footnote;
+% matching \altaffiltext will appear at bottom of page.
+
+% \authors{A. B. Smith,\altaffilmark{1}
+% Eric Brown,\altaffilmark{1,2} Rick Williams,\altaffilmark{3}
+% John B. McDougall\altaffilmark{4}, and S. Visconti\altaffilmark{5}}
+
+%\altaffiltext{1}{Department of Hydrology and Water Resources,
+%University of Arizona, Tucson, Arizona, USA.}
+
+%\altaffiltext{2}{Department of Geography, Ohio State University,
+%Columbus, Ohio, USA.}
+
+%\altaffiltext{3}{Department of Space Sciences, University of
+%Michigan, Ann Arbor, Michigan, USA.}
+
+%\altaffiltext{4}{Division of Hydrologic Sciences, Desert Research
+%Institute, Reno, Nevada, USA.}
+
+%\altaffiltext{5}{Dipartimento di Idraulica, Trasporti ed
+%Infrastrutture Civili, Politecnico di Torino, Turin, Italy.}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  KEYPOINTS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Key points are 1 to 3 points that the author provides,
+% that are 100 characters or less, that are ultimately published
+% with the article.
+%% for example:
+\keypoints{\item Here is the first keypoint. what happens if it is a
+ long keypoint, like this one. We want to see this wrap please.
+\item This is the second.
+\item And here is the third keypoint
+}
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  ABSTRACT
+%
+%% ------------------------------------------------------------------------ %%
+
+% >> Do NOT include any \begin...\end commands within
+% >> the body of the abstract.
+
+\begin{abstract}
+(Type abstract here)
+\end{abstract}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  BEGIN ARTICLE
+%
+%% ------------------------------------------------------------------------ %%
+
+% The body of the article must start with a \begin{article} command
+%
+% \end{article} must follow the references section, before the figures
+%  and tables.
+
+\begin{article}
+
+%% ------------------------------------------------------------------------ %%
+%
+%  TEXT
+%
+%% ------------------------------------------------------------------------ %%
+
+\section{Introduction}
+(Article text here)
+
+\section{Carbonate platform evolution models}
+
+\section{pyReef model}
+
+\subsection{Model overview}
+
+python parallel docker open-source github multi-habitats
+
+\subsection{Large-scale forcings}
+
+temperature, salinity sea-level tectonics 
+
+\subsection{Wave transformation}
+
+SWAN, short for \textit{Simulating WAves Nearshore}, is a third-generation, finite-difference, wave model used to predict wave propagation in coastal areas and estuaries. It is governed by the wave action balance equation \citep{Bretherton68, Hasselmann73, Holthuijsen93, Booij99}:
+
+\begin{equation}
+ \frac{\partial N}{\partial t}+\nabla_{\vec{x}} \cdot \left[ \left( \vec{c_g} + \vec{U} \right) N \right] + \frac{\partial c_{\theta}N}{\partial \theta} + \frac{\partial c_{\sigma}N}{\partial \sigma} = \frac{S_{tot}}{\sigma}
+\end{equation}
+
+\noindent where $N(\vec{x},t,\sigma,\theta)$ is the wave action function of geographical space $\vec{x}$, time $t$, relative frequency $\sigma$ and wave direction $\theta$. $\nabla_{\vec{x}}$ is the gradient operator in space, $\vec{c_g}$ and $\vec{U}$ are the wave group velocity and ambient current vector respectively and $c_{\theta}$, $c_{\sigma}$ is the propagation velocity in $\theta$ and $\sigma$ domain. Finally $S_{tot}$ is the source term which can include wind, whitecapping, surf breaking and bottom friction \citep{Booij99}.
+
+\noindent In our model, shoaling and refraction are accounted for from a series of deep-water wave conditions through time in the absence of wind forcing. Hence to compute wave field generation, the model requires bathymetric conditions and definitions of offshore significant wave height, characteristic period of the energy spectrum and wave direction and associated spreading angle.
+
+\noindent To evaluate reef responses over several hundreds of years, the approach taken here does not examine temporal evolving wave fields, such as those produced during storm events and relies on SWAN stationary mode. In pyReef, the wave transformation model is generally performed for time intervals varying from $0.5$ to $10$ years. Our aim is to simulate realistic wave fields by imposing a sequence of wave forcing conditions (\textit{e.g.} series of fair-weather and/or storm events). At any given time interval, we define a percentage of activity for each deep-water wave conditions and the bathymetry is used to compute associated wave parameters. Possibility is given to derived these parameters for both low and high tides. 
+
+Combined with the climatic forcing described above, two additional wave factors could be adjusted in the model: the breaking parameter and the bottom friction. 
+
+\noindent In regions where wave height is close to water depth, wave breaking is an important source of energy dissipation on reefs \citep{Symonds95, Becker14}. This effect is typically approximated with a constant breaking parameter $\gamma_s$ \citep{Symonds95, Vetter10} which values have been calibrated for different reef systems \citep{Apotsos07, Vetter10, Monismith13, Franklin13, Rogers15}.
+
+\noindent The high rugosity of reefs plays a significant role on wave dynamics by increasing the frictional dissipation of wave energy flux \citep{Young89, Lowe05, Lowe15}. This dissipation is usually approximated with a wave roughness friction factor $f_w$ which values have been well constrained for sand grain \citep{Kamphuis75, Grant79, Dean91}. In phase-averaged wave action approach like SWAN, this bottom dissipation is parameterised as a function of wave excursion to bottom roughness scale with a maximum value of 0.3 for $f_w$ \citep{Jonsson66, Madsen88}. Several studies \citep{Nelson96, Lowe05, Lentz15, Rogers15, Monismith15} indicates that this roughness factor can be much higher for reef systems (\textit{i.e.} up to 5.0 for reef platform in the Red Sea \citep{Lentz15}). To better estimate the impact of reef rugosity on frictional dissipation, we have modified the existing formulation for $f_w$ in SWAN and used the proposed parameterisation from \citet{Rogers15} based on  \citet{Swart74}:
+\begin{equation}
+\def\arraystretch{1.4}
+f_w=\left\{
+                \begin{array}{ll}
+                  exp\left[ a_1 \left( A_b / k_N \right)^{a_2} + a_3\right], \; A_b/k_N \ge 0.0369 \\
+                  50, \; A_b/k_N < 0.0369 
+                \end{array}
+              \right.
+\end{equation}  
+\noindent where $A_b$ is the wave excursion distance, $k_N$ is the bottom roughness scale and the coefficients $a_1=$5.213, $a_2=-$0.194, and $a_3=-$5.977 have been set based on \citet{Rogers15}  Palmyra study. Alternate coefficient from \citet{Nielsen92} can also be used ($a_1=$5.5, $a_2=-$0.2, and $a_3=-$6.3). For large values of $A_b/k_N$, this formulation is similar to the one from Madsen et al. [1988] (implemented in SWAN), but extends the parameterisation for lower $A_b/k_N$. In pyReef, the bottom friction is based on the proposed formulation and requires the definition of the bottom roughness scale ($k_N$) which values is generally set to 2-3 times the characteristic diameters of the studied region \citep{Nielsen92, Lowe05, Rogers15}.
+
+\noindent For each forcing conditions, the wave transformation model computes and returns the significant wave height, the mean wave direction and the root-mean-square value of the maxima of the orbital velocity near the bottom. These parameters are subsequently used to evaluate the long-term hydrodynamic forces active over the simulated region.
+
+\subsection{Long-term wave-driven circulation}
+
+Flow circulation in and around reef platforms depends on the complex interactions between the overlying water motion and the three-dimensional bottom roughness formed by reef organisms. Attempts to numerically simulate flow dynamics around individual coral colonies have been proposed \citep{Kaandorp03, Chang09, Chindapol13} but such models require the flows to be solve down to few millimetres scale and are beyond the scope of our approach. Here we assume that the flow circulation in the reef platform is mainly driven by waves and regional-scale drivers of reefs hydrodynamics such as coastal upwelling or ocean currents are ignored. Numerical studies of wave-driven flow around reef systems commonly use depth-averaged Navier-Stokes equations \citep{Raupach82, Symonds95, Lowe05, Lowe09, Pomeroy12, Taebi11}. In the context of millennial scale reef platform evolution, these methods however are still computationally prohibitive. In pyReef, the proposed method consists in producing \textit{snapshots} of wave-driven circulation distribution resulting from series of deep-water wave scenarios by computing time-averaged cross-shore and longshore currents.  
+
+In nearshore environments, longshore current runs parallel to the shore and is generated by the radiation stresses associated with the breaking process for obliquely incoming waves and by the surplus water which is carried across the breaker zone towards the shoreline \citep{Longuet-Higgins70}. This current affect the transport and transfer of mass (loose carbonate sands, nutrients and carbon) in the nearshore reef waters \citep{Hamner88, Monismith07, Lowe15}. Many empirical formulation of longshore current have been proposed since the initial work from   \citet{Longuet-Higgins64}  \citep{Komar70, Komar75, Galvin87, Reniers97, Ruessink01, Grasmeijer03}. In pyReef, the approach from \citet{Komar75} is used to calculate the longshore current velocity ($\vec{v_l}$) in the middle of the breaking zone:
+\begin{equation}
+\vec{v_l} = \kappa_l u_{b} cos(\theta) sin(\theta) \vec{k}
+\end{equation}
+where $u_b$ is the maximum near-bed orbital velocity obtained from SWAN, $\theta$ the angle of incidence of the incoming waves, $\kappa_l$  a scaling parameter and $\vec{k}$ the unit vector parallel to the breaking depth contour. For wave rays approaching the reef at on oblique angle, the component of wave energy flux parallel to the reef shore will drives this longshore velocity. The calculation of the angle of incidence in pyReef is quite straightforward and requires an estimate of wave breaking depth (defined for each wave scenario) and wave direction (obtained from the wave transformation model). 
+
+In addition to longshore current, two types of cross-shore velocities are simulated in pyReef. First we estimate the onshore velocity which is essential in predicting the shoreward transport of broken carbonate particles during fair-weather periods  \citep{Elfrink99, Ruessink98}. In our model, we assume a linear dependency between the near-bed orbital velocity and the intensity of this onshore current $\vec{v_o}$:
+\begin{equation}
+\vec{v_o} = \kappa_o u_b \vec{n}
+\end{equation}
+with $u_b$ the maximum near-bed orbital velocity, $\vec{n}$ the unit vector parallel to the incoming wave direction and $\kappa_o$ a correction factor. $\kappa_o$ can be derived from local shallow reef water conditions and reflects natural wave skewness and asymmetry which are known to play a central part in cross-shore velocity profile \citep{Grasmeijer03, Crawford03}. The onshore velocity ($\vec{v_o}$) is usually associated to the wave crest and is stronger than the one due to the wave trough \citep{Isobe82, Grasmeijer03}. 
+
+During strong wave conditions, a second type of wave-induced cross-shore velocity is defined in pyReef and simulates an offshore-directed steady current referred to as undertow. The time-averaged and depth-averaged undertow velocity $\vec{v_u}$ is derived from the mass flux due to the wave motion and surface roller \citep{Svendsen87}. Under normal incident periodic waves, \citet{Longuet-Higgins75} showed that the depth- and time-averaged undertow velocity is related to the wave's kinetic energy density and phase speed. Assuming  equipartition of kinetic and potential wave energy, the total energy density of the wave is approximately \citep{Svendsen84}:
+\begin{equation}
+E_w = \frac{1}{8} \rho g H^2
+\end{equation}
+with $\rho$ the ocean density and  $H$ the root-mean-square wave height returned by SWAN. Following \citet{Cox98}, the undertow velocity is assumed to have the following form in our model:
+\begin{equation}
+\vec{v_u} = - \kappa_u \frac{\sqrt{g h}}{8} \left(\frac{H}{h} \right)^2 \vec{n}
+\end{equation}
+with $\kappa_u$ an empirical coefficient \citep{Kobayashi98}, $g$ the gravitational acceleration, $h$ the water depth and $\vec{n}$ the unit vector parallel to the incoming wave direction.
+   
+\subsection{Calcareous sand transport}
+transport formulation multi-sediment stratigraphy
+soulsby van rijn
+Initiation of Motion of Calcareous Sand
+diffusion
+
+\subsection{Carbonate growth and disintegration}
+
+The fuzzy model simulates the deposition of reefs and carbonate facies through integration of local and global variables. Local-scale factors include basement relief, sea-level change, climate, latitude, water energy, water depth, background sedimentation rate, and substrate conditions. Regional and global-scale changes include relative sea-level change, climate, and latitude.
+
+\section{Models setup}
+
+
+\section{Results}
+
+impact of storms on carbonate evolution (model with fair weather and model with 1 storm and after 2 storms)
+
+impact of sea-level change and thermal subsidence 
+
+impact of change in pH and ocean temperature
+
+\section{Discussion}
+
+
+\section{Conclusions}
+
+%%% End of body of article:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Optional Appendix goes here
+%
+% \appendix resets counters and redefines section heads
+% but doesn't print anything.
+% After typing \appendix
+%
+%\section{Here Is Appendix Title}
+% will show
+% Appendix A: Here Is Appendix Title
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Optional Glossary or Notation section, goes here
+%
+%%%%%%%%%%%%%%
+% Glossary is only allowed in Reviews of Geophysics
+% \section*{Glossary}
+% \paragraph{Term}
+% Term Definition here
+%
+%%%%%%%%%%%%%%
+% Notation -- End each entry with a period.
+% \begin{notation}
+% Term & definition.\\
+% Second term & second definition.\\
+% \end{notation}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%  ACKNOWLEDGMENTS
+
+\begin{acknowledgments}
+(Text here)
+\end{acknowledgments}
+
+%% ------------------------------------------------------------------------ %%
+%%  REFERENCE LIST AND TEXT CITATIONS
+%
+% Either type in your references using
+% \begin{thebibliography}{}
+% \bibitem{}
+% Text
+% \end{thebibliography}
+%
+% Or,
+%
+% If you use BiBTeX for your references, please use the agufull08.bst file (available at % ftp://ftp.agu.org/journals/latex/journals/Manuscript-Preparation/) to produce your .bbl
+% file and copy the contents into your paper here.
+%
+% Follow these steps:
+% 1. Run LaTeX on your LaTeX file.
+%
+% 2. Make sure the bibliography style appears as \bibliographystyle{agufull08}. Run BiBTeX on your LaTeX
+% file.
+%
+% 3. Open the new .bbl file containing the reference list and
+%   copy all the contents into your LaTeX file here.
+%
+% 4. Comment out the old \bibliographystyle and \bibliography commands.
+%
+% 5. Run LaTeX on your new file before submitting.
+%
+% AGU does not want a .bib or a .bbl file. Please copy in the contents of your .bbl file here.
+
+\begin{thebibliography}{}
+
+\bibitem[{\textit{Apotsos et al.}(2007)}]{Apotsos07}
+Apotsos, A., B. Raubenheimer, S. Elgar, R. T. Guza, and J. A. Smith (2007), Effects of wave rollers and bottom stress on wave setup, \textit{J. Geophys. Res.}, \textit{112}, C02003, doi:10.1029/2006JC003549.
+
+\bibitem[{\textit{Becker et al.}(2014)}]{Becker14}
+Becker, J. M., M. A. Merrifield, and M. Ford (2014), Water level effects on breaking wave setup for Pacific Island fringing reefs, \textit{J. Geophys. Res. Oceans}, \textit{119}, 914--932, doi:10.1002/2013JC009373.
+
+\bibitem[{\textit{Booij et~al.}(1999)}]{Booij99}
+Booij N., R. Ris, and L. Holthuijsen (1999), A third-generation wave model for coastal regions. 1. Model description and validation, \textit{J. Geophys. Res.}, \textit{104},(C4), 7649--7666.
+
+\bibitem[{\textit{Bretherton and Garrett}(1968)}]{Bretherton68}
+Bretherton, F., and C. Garrett (1968), Wavetrains in inhomogeneous moving media, \textit{Proc. R. Soc. Lond. Ser. A}, \textit{302}, 529--554; doi:10.1098/rspa.1968.0034.
+
+\bibitem[{\textit{Chang et~al.}(2009)}]{Chang09}
+Chang, S., C. Elkins, M. Alley, J. Eaton, and S. G. Monismith (2009), Flow inside a coral colony measured using magneticresonance velocimetry, \textit{Limnol. Oceanogr.}, \textit{54}, 1819.
+
+\bibitem[{\textit{Chindapol et~al.}(2013)}]{Chindapol13}
+Chindapol N., J. A. Kaandorp, C. Cronemberger, T. Mass, and A. Genin (2013), Modelling growth and form of the scleractinian coral Pocillopora verrucosa and the influence of hydrodynamics, \textit{PLoS Comput. Biol.}, \textit{9}, e1002849
+
+\bibitem[{\textit{Cox and Kobayashi}(1998)}]{Cox98}
+Cox, D. T. and N. Kobayashi (1998), Application of an Undertow Model to Irregular Waves on Plane and Barred Beaches, \textit{J. Coast. Res.}, \textit{14}, 4, 1314--1324.
+
+\bibitem[{\textit{Crawford and Hay}(2003)}]{Crawford03}
+Crawford, A. M., and A. E. Hay (2003), Wave orbital velocity skewness and linear transition ripple migration: Comparison with weakly nonlinear theory, \textit{J. Geophys. Res.}, \textit{108}, 3091, doi:10.1029/2001JC001254.
+
+\bibitem[{\textit{Dean and Dalrymple}(1991)}]{Dean91}
+Dean, R. G., and R. A. Dalrymple (1991), Water wave mechanics for engineers and scientists, \textit{Advanced Series on Ocean Engineering}, vol. 2, World Sci., Hackensack, N. J.
+
+\bibitem[{\textit{Elfrink et al.}(1999)}]{Elfrink99}
+Elfrink, B., K. A. Rakha, R. Deigaard, and I. Br{\o}ker (1999), Effect of near-bed velocity skewness on cross-shore sediment transport,  \textit{Proceedings Coastal Sediments. ASCE, Reston, VA, USA}, pp. 33--47.
+
+\bibitem[{\textit{Franklin et al.}(2013)}]{Franklin13}
+Franklin, G., I. Marin~o-Tapia, and A. Torres-Freyermuth (2013), Effects of reef roughness on wave setup and surf zone currents, \textit{J. Coastal Res.}, \textit{Special Issue 65}, 2005--2010.
+
+\bibitem[{\textit{Galvin}(1987)}]{Galvin87}
+Galvin, C. (1987), The continuity equation for long shore current velocity with breaker angle adjusted for a wave-current interaction, \textit{Coast. Eng.}, \textit{11(2)}, 115--129.
+
+\bibitem[{\textit{Grant and Madsen}(1979)}]{Grant79}
+Grant, W. D., and O. S. Madsen (1979), Combined wave and current interaction with a rough bottom, \textit{J. Geophys. Res.}, \textit{84(C4)}, 1797--1808, doi:10.1029/JC084iC04p01797.
+
+\bibitem[{\textit{Grasmeijer and Ruessink}(2003)}]{Grasmeijer03}
+Grasmeijer, B. T., and B. G.Ruessink (2003), Modeling of waves and currents in the nearshore: parametric vs. probabilistic approach, \textit{Coastal Engineering}, \textit{49}, 185--207.
+
+\bibitem[{\textit{Hamner and Wolanski}(1988)}]{Hamner88}
+Hamner, W., and E. Wolanski (1988), Hydrodynamic forcing functions and biological processes on coral reefs: astatus review, \textit{In Proceedings of the 6th International Coral Reef Symposium, Vol. 1: Plenary Addresses and Status Review, ed. JH Choat, D Barnes, MA Borowitzka, JC Coll, PJ Davies, et al.}, pp. 103--13. Townsville, Aust.: Int. Coral Reef Symp. Exec. Comm.
+
+\bibitem[{\textit{Hasselmann et al.}(1973)}]{Hasselmann73}
+Hasselmann, K., et al. (1973), Measurements of wind-wave growth and swell decay during the Joint North Sea Wave Project (JONSWAP), \textit{Dtsch. HydrogrZ. 2}, Suppl., 1 (A8), 1--95.
+
+\bibitem[{\textit{Holthuijsen et~al.}(1993)}]{Holthuijsen93}
+Holthuijsen L.~H, N. Booij, and R.~C. Ris (1993), A spectral wave model for the coastal zone, \textit{Proceedings of the 2nd international symposium on ocean wave measurement and analysis}, \textit{New Orleans, LA}, pp. 630--641.
+
+\bibitem[{\textit{Isobe and  Horikawa}(1982)}]{Isobe82}
+Isobe, M., and K. Horikawa (1982), Study on water particle velocities of shoaling and breaking waves,  \textit{Coast. Eng. in Japan},  \textit{25}, 109--123.
+
+\bibitem[{\textit{Jonsson}(1966)}]{Jonsson66}
+Jonsson, I. G. (1966), Wave boundary layer and friction factors. \textit{Coastal Eng. Conf.}, \textit{1(10)}, 125--148.
+
+\bibitem[{\textit{Kaandorp et al.}(2003)}]{Kaandorp03}
+Kaandorp, J.A., E. A. Koopman, P. M. Sloot, R. P. Bak, M. J. Vermeij, and L. E. Lampmann, (2003), Simulation and analysis of flow patterns around the scleractinian coral Madracis mirabilis (Duchassaing and Michelotti), \textit{Philos. Trans. R. Soc. Lond. B 358}, 1551--57
+
+\bibitem[{\textit{Kobayashi et al.}(1998)}]{Kobayashi98}
+Kobayashi, N., M. N. Herrman, B. D. Johnson, and M. D. Orzech (1998), Probability distribution of surface elevations in surf and swash zones, \textit{J. Waterway, Port, Coastal, and Ocean Eng.}, \textit{124}, (3), 99--107.
+
+\bibitem[{\textit{Kamphuis}(1975)}]{Kamphuis75}
+Kamphuis, J. (1975), Friction factor under oscillatory waves, \textit{J. Waterw. Harbors Coastal Eng. Div. ASCE}, \textit{101}, 135--144.
+
+\bibitem[{\textit{Komar and Inman}(1970)}]{Komar70}
+Komar, P. D., and D. L. Inman (1970), Long-shore sand transport on beaches, \textit{J. Geophys. Res.}, \textit{75(30)}, 5914--5927.
+
+\bibitem[{\textit{Komar and Miller}(1975)}]{Komar75}
+Komar , P. D., and M. C. Miller (1975),The initiation of oscillatory ripple marks and the development of plane-bed at high shear stresses under waves, \textit{J. Sed. Res.}, \textit{45(3)}, 697--703.
+
+\bibitem[{\textit{Lentz et~al.}(2015)}]{Lentz15}
+Lentz, S. J., J. H. Churchill, K. A. Davis, and J. T. Farrar (2015). Surface gravity wave transformation across a platform coral reef in the Red Sea, \textit{J. Geophys. Res.}, doi:10.1002/2015JC011142.
+
+\bibitem[{\textit{Longuet-Higgins}(1970)}]{Longuet-Higgins70}
+Longuet-Higgins, M. S., 1970. Longshore currents generated by obliquely incident sea waves, \textit{J. Geophys. Res.}, \textit{75(33)}, 1--35.
+
+\bibitem[{\textit{Longuet-Higgins}(1975)}]{Longuet-Higgins75}
+Longuet-Higgins, M.S. (1975), Integral properties of periodic gravity waves of finite amplitude, \textit{Proceedings of the Royal Society of London A}, \textit{342}(1629), 157--174
+
+\bibitem[{\textit{Longuet-Higgins and Stewart}(1964)}]{Longuet-Higgins64}
+Longuet-Higgins, M. S., and R. W. Stewart (1964), Radiation stresses in water waves; a physical discussion, with applications, \textit{Deep-Sea Research}, \textit{11}, 529--562.
+
+\bibitem[{\textit{Lowe et~al.}(2005)}]{Lowe05}
+Lowe, R. J., J. L. Falter, M. D. Bandet, G. Pawlak, M. J. Atkinson, S. G. Monismith, and J. R. Koseff (2005), Spectral wave dissipation over a barrier reef, \textit{J. Geophys. Res.}, \textit{110}, C04001, doi:10.1029/2004JC002711.
+
+\bibitem[{\textit{Lowe et~al.}(2009)}]{Lowe09}
+Lowe, R.J., J. L. Falter, S. G. Monismith SG, and M. J. Atkinson (2009), A numerical study of circulation in a coastal reef-lagoon system, \textit{J. Geophys. Res.}, \textit{114}, C06022.
+
+\bibitem[{\textit{Lowe and Falter}(2015)}]{Lowe15}
+Lowe, R. J., and J. L. Falter (2015). Oceanic forcing of coral reefs, \textit{Annu. Rev. Mar. Sci.}, \textit{7}, 43--66, doi:10.1146/annurev-marine-010814-015834.
+
+\bibitem[{\textit{Madsen et al.}(1988)}]{Madsen88}
+Madsen, O. S., Y. Poon, and H. C. Graber (1988), Spectral wave attenuation by bottom friction: Theory, \textit{Coastal Eng. Conf.}, \textit{1(21)}, 492--504.
+
+\bibitem[{\textit{Monismith}(2007)}]{Monismith07}
+Monismith, S. G. (2007), Hydrodynamics of coral reefs, \textit{Annu. Rev. Fluid Mech.}, \textit{39}, 37--55.
+
+\bibitem[{\textit{Monismith et al.}(2013)}]{Monismith13}
+Monismith, S. G., L. Herdman, S. Ahmerkamp, and J. Hench (2013), Wave transformation and wave-driven flow across a steep coral reef, \textit{J. Phys. Oceanogr.}, \textit{43}, 1356--1379, doi:10.1175/JPO-D-12-0164.1.
+
+\bibitem[{\textit{Monismith et al.}(2015)}]{Monismith15}Monismith, S. G., J. S. Rogers, D. Koweek, and R. B. Dunbar (2015), Frictional wave dissipation on a remarkably rough reef, \textit{Geophys. Res. Lett.}, \textit{42}, 4063--4071, doi:10.1002/2015GL063804.
+
+\bibitem[{\textit{Nelson}(1996)}]{Nelson96}
+Nelson, R. C. (1996), Hydraulic roughness of coral reef platforms, \textit{Appl. Ocean Res.}, \textit{18(5)}, 265--274.
+
+\bibitem[{\textit{Nielsen}(1992)}]{Nielsen92}
+Nielsen, P (1992), \textit{Coastal Bottom Boundary Layers and Sediment Transport, Advanced Series on Ocean Engineering}, vol. 4, World Sci., Hackensack, N. J.
+
+\bibitem[{\textit{Pomeroy et al.}(2012)}]{Pomeroy12}
+Pomeroy A., R. J. Lowe, G. Symonds, A. van Dongeren,  and C. Moore (2012), The dynamics of infragravity wavetransformation over a fringing reef, \textit{J. Geophys. Res.}, \textit{117}, C11022.
+
+\bibitem[{\textit{Raupach and Shaw}(1982)}]{Raupach82}Raupach, M. R., and R. H. Shaw (1982), Averaging procedures for flow within vegetation canopies, \textit{Bound. Layer Me-teorol.}, \textit{22}, 79--90.
+
+\bibitem[{\textit{Reniers and Battjes}(1997)}]{Reniers97}
+Reniers, A. J. H. M., and J. A. Battjes, (1997), A laboratory study of long shore currents over barred and non-barred beaches,  \textit{Coast. Eng.}, \textit{30(1-2)}, 1--21.
+
+\bibitem[{\textit{Rogers el al.}(2015)}]{Rogers15}
+Rogers, J. S., S. G. Monismith, D. A. Koweek, and R. B. Dunbar (2015), Wave dynamics of a Pacific Atoll with high frictional effects, \textit{J. Geophys. Res. Oceans}, \textit{120}, doi:10.1002/ 2015JC011170.
+
+\bibitem[{\textit{Ruessink et al.}(1998)}]{Ruessink98}
+Ruessink, B. G., K. T. Houwman, and P. Hoekstra (1998), The systematic contribution of transporting mechanisms to the cross-shore sediment transport in water depth of 3 to 9 m, \textit{Marine Geology}, \textit{152}, 295--324.
+
+\bibitem[{\textit{Ruessink et al.}(2001)}]{Ruessink01}
+Ruessink, B. G., J. R. Miles, F. Feddersen, R. T. Guza, and S. Elgar (2001), Modeling the alongshore current on barred beaches.  \textit{J. Geophys. Res.}, \textit{106}, 22451--22464.
+
+\bibitem[{\textit{Symonds et al.}(1995)}]{Symonds95}
+Symonds, G., K. P. Black, and I. R. Young (1995), Wave-driven flow over shallow reefs, \textit{J. Geophys. Res.}, \textit{100(C2)}, 2639--2648, doi:10.1029/94JC02736.
+
+\bibitem[{\textit{Svendsen}(1984)}]{Svendsen84}
+Svendsen, L. A. (1984), Mass flux and undertow in a surf zone, \textit{Coastal Eng.}, \textit{8}, 247--365.
+
+\bibitem[{\textit{Svendsen et al.}(1987)}]{Svendsen87}Svendsen, L. A., H. A. Schaffer, and J. B. Hansen (1987), The interaction between the undertow and the boundary layer flow on a beach, \textit{J. Geophys. Res.}, \textit{92}, C11, 11845--11856.
+
+\bibitem[{\textit{Swart}(1974)}]{Swart74}
+Swart, D. H. (1974), Offshore sediment transport and equilibrium beach profiles, PhD Dissertation, TU Delft, Delft University of Technology, Delft, Netherlands.
+
+\bibitem[{\textit{Taebi et al.}(2011)}]{Taebi11}
+Taebi, S., R. J. Lowe, C. B. Pattiaratchi, G. N. Ivey,  G. Symonds, and R. Brinkman (2011), Nearshore circulation in atropical fringing reef system, \textit{J. Geophys. Res.}, \textit{116}, C02016.
+
+\bibitem[{\textit{Vetter et al.}(2010)}]{Vetter10}
+Vetter, O., J. M. Becker, M. A. Merrifield, A.-C. P\'equignet, J. Aucan, S. J. Boc, and C. E. Pollock (2010), Wave setup over a Pacific Island fringing reef, \textit{J. Geophys. Res.}, \textit{115}, C12066, doi:10.1029/2010JC006455.
+
+\bibitem[{\textit{Young}(1989)}]{Young89}
+Young, I. R. (1989), Wave transformation over coral reefs, \textit{J. Geophys. Res.}, \textit{94(C7)}, 9779--9789, doi:10.1029/JC094iC07p09779.
+
+
+%\providecommand{\natexlab}[1]{#1}
+%\expandafter\ifx\csname urlstyle\endcsname\relax
+%  \providecommand{\doi}[1]{doi:\discretionary{}{}{}#1}\else
+%  \providecommand{\doi}{doi:\discretionary{}{}{}\begingroup
+%  \urlstyle{rm}\Url}\fi
+%
+%\bibitem[{\textit{Atkinson and Sloan}(1991)}]{AtkinsonSloan}
+%Atkinson, K., and I.~Sloan (1991), The numerical solution of first-kind
+%  logarithmic-kernel integral equations on smooth open arcs, \textit{Math.
+%  Comp.}, \textit{56}(193), 119--139.
+%
+%\bibitem[{\textit{Colton and Kress}(1983)}]{ColtonKress1}
+%Colton, D., and R.~Kress (1983), \textit{Integral Equation Methods in
+%  Scattering Theory}, John Wiley, New York.
+%
+%\bibitem[{\textit{Hsiao et~al.}(1991)\textit{Hsiao, Stephan, and
+%  Wendland}}]{StephanHsiao}
+%Hsiao, G.~C., E.~P. Stephan, and W.~L. Wendland (1991), On the {D}irichlet
+%  problem in elasticity for a domain exterior to an arc, \textit{J. Comput.
+%  Appl. Math.}, \textit{34}(1), 1--19.
+%
+%\bibitem[{\textit{Lu and Ando}(2012)}]{LuAndo}
+%Lu, P., and M.~Ando (2012), Difference of scattering geometrical optics
+%  components and line integrals of currents in modified edge representation,
+%  \textit{Radio Sci.}, \textit{47},  RS3007, \doi{10.1029/2011RS004899}.
+
+\end{thebibliography}
+
+%Reference citation examples:
+
+%...as shown by \textit{Kilby} [2008].
+%...as shown by {\textit  {Lewin}} [1976], {\textit  {Carson}} [1986], {\textit  {Bartholdy and Billi}} [2002], and {\textit  {Rinaldi}} [2003].
+%...has been shown [\textit{Kilby et al.}, 2008].
+%...has been shown [{\textit  {Lewin}}, 1976; {\textit  {Carson}}, 1986; {\textit  {Bartholdy and Billi}}, 2002; {\textit  {Rinaldi}}, 2003].
+%...has been shown [e.g., {\textit  {Lewin}}, 1976; {\textit  {Carson}}, 1986; {\textit  {Bartholdy and Billi}}, 2002; {\textit  {Rinaldi}}, 2003].
+
+%...as shown by \citet{jskilby}.
+%...as shown by \citet{lewin76}, \citet{carson86}, \citet{bartoldy02}, and \citet{rinaldi03}.
+%...has been shown \citep{jskilbye}.
+%...has been shown \citep{lewin76,carson86,bartoldy02,rinaldi03}.
+%...has been shown \citep [e.g.,][]{lewin76,carson86,bartoldy02,rinaldi03}.
+%
+% Please use ONLY \citet and \citep for reference citations.
+% DO NOT use other cite commands (e.g., \cite, \citeyear, \nocite, \citealp, etc.).
+
+%% ------------------------------------------------------------------------ %%
+%
+%  END ARTICLE
+%
+%% ------------------------------------------------------------------------ %%
+\end{article}
+%
+%
+%% Enter Figures and Tables here:
+%
+% DO NOT USE \psfrag or \subfigure commands.
+%
+% Figure captions go below the figure.
+% Table titles go above tables; all other caption information
+%  should be placed in footnotes below the table.
+%
+%----------------
+% EXAMPLE FIGURE
+%
+ %\begin{figure}
+ %\noindent\includegraphics[width=20pc]{samplefigure.eps}
+ %\caption{Caption text here}
+ %\label{figure_label}
+ %\end{figure}
+%
+% ---------------
+% EXAMPLE TABLE
+%
+%\begin{table}
+%\caption{Time of the Transition Between Phase 1 and Phase 2\tablenotemark{a}}
+%\centering
+%\begin{tabular}{l c}
+%\hline
+% Run  & Time (min)  \\
+%\hline
+%  $l1$  & 260   \\
+%  $l2$  & 300   \\
+%  $l3$  & 340   \\
+%  $h1$  & 270   \\
+%  $h2$  & 250   \\
+%  $h3$  & 380   \\
+%  $r1$  & 370   \\
+%  $r2$  & 390   \\
+%\hline
+%\end{tabular}
+%\tablenotetext{a}{Footnote text here.}
+%\end{table}
+
+% See below for how to make sideways figures or tables.
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+More Information and Advice:
+
+%% ------------------------------------------------------------------------ %%
+%
+%  SECTION HEADS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Capitalize the first letter of each word (except for
+% prepositions, conjunctions, and articles that are
+% three or fewer letters).
+
+% AGU follows standard outline style; therefore, there cannot be a section 1 without
+% a section 2, or a section 2.3.1 without a section 2.3.2.
+% Please make sure your section numbers are balanced.
+% ---------------
+% Level 1 head
+%
+% Use the \section{} command to identify level 1 heads;
+% type the appropriate head wording between the curly
+% brackets, as shown below.
+%
+%An example:
+%\section{Level 1 Head: Introduction}
+%
+% ---------------
+% Level 2 head
+%
+% Use the \subsection{} command to identify level 2 heads.
+%An example:
+%\subsection{Level 2 Head}
+%
+% ---------------
+% Level 3 head
+%
+% Use the \subsubsection{} command to identify level 3 heads
+%An example:
+%\subsubsection{Level 3 Head}
+%
+%---------------
+% Level 4 head
+%
+% Use the \subsubsubsection{} command to identify level 3 heads
+% An example:
+%\subsubsubsection{Level 4 Head} An example.
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  IN-TEXT LISTS
+%
+%% ------------------------------------------------------------------------ %%
+%
+% Do not use bulleted lists; enumerated lists are okay.
+% \begin{enumerate}
+% \item
+% \item
+% \item
+% \end{enumerate}
+%
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATIONS
+%
+%% ------------------------------------------------------------------------ %%
+
+% Single-line equations are centered.
+% Equation arrays will appear left-aligned.
+
+Math coded inside display math mode \[ ...\]
+ will not be numbered, e.g.,:
+ \[ x^2=y^2 + z^2\]
+
+ Math coded inside \begin{equation} and \end{equation} will
+ be automatically numbered, e.g.,:
+ \begin{equation}
+ x^2=y^2 + z^2
+ \end{equation}
+
+% IF YOU HAVE MULTI-LINE EQUATIONS, PLEASE
+% BREAK THE EQUATIONS INTO TWO OR MORE LINES
+% OF SINGLE COLUMN WIDTH (20 pc, 8.3 cm)
+% using double backslashes (\\).
+
+% To create multiline equations, use the
+% \begin{eqnarray} and \end{eqnarray} environment
+% as demonstrated below.
+\begin{eqnarray}
+  x_{1} & = & (x - x_{0}) \cos \Theta \nonumber \\
+        && + (y - y_{0}) \sin \Theta  \nonumber \\
+  y_{1} & = & -(x - x_{0}) \sin \Theta \nonumber \\
+        && + (y - y_{0}) \cos \Theta.
+\end{eqnarray}
+
+%If you don't want an equation number, use the star form:
+%\begin{eqnarray*}...\end{eqnarray*}
+
+% Break each line at a sign of operation
+% (+, -, etc.) if possible, with the sign of operation
+% on the new line.
+
+% Indent second and subsequent lines to align with
+% the first character following the equal sign on the
+% first line.
+
+% Use an \hspace{} command to insert horizontal space
+% into your equation if necessary. Place an appropriate
+% unit of measure between the curly braces, e.g.
+% \hspace{1in}; you may have to experiment to achieve
+% the correct amount of space.
+
+
+%% ------------------------------------------------------------------------ %%
+%
+%  EQUATION NUMBERING: COUNTER
+%
+%% ------------------------------------------------------------------------ %%
+
+% You may change equation numbering by resetting
+% the equation counter or by explicitly numbering
+% an equation.
+
+% To explicitly number an equation, type \eqnum{}
+% (with the desired number between the brackets)
+% after the \begin{equation} or \begin{eqnarray}
+% command.  The \eqnum{} command will affect only
+% the equation it appears with; LaTeX will number
+% any equations appearing later in the manuscript
+% according to the equation counter.
+%
+
+% If you have a multiline equation that needs only
+% one equation number, use a \nonumber command in
+% front of the double backslashes (\\) as shown in
+% the multiline equation above.
+
+%% ------------------------------------------------------------------------ %%
+%
+%  SIDEWAYS FIGURE AND TABLE EXAMPLES
+%
+%% ------------------------------------------------------------------------ %%
+%
+% For tables and figures, add \usepackage{rotating} to the paper and add the rotating.sty file to the folder.
+% AGU prefers the use of {sidewaystable} over {landscapetable} as it causes fewer problems.
+%
+% \begin{sidewaysfigure}
+% \includegraphics[width=20pc]{samplefigure.eps}
+% \caption{caption here}
+% \label{label_here}
+% \end{sidewaysfigure}
+%
+%
+%
+% \begin{sidewaystable}
+% \caption{}
+% \begin{tabular}
+% Table layout here.
+% \end{tabular}
+% \end{sidewaystable}
+%
+%
+
