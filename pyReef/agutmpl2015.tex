@@ -174,7 +174,7 @@ School of Geosciences, University of Sydney, Madsen Building, Sydney, NSW 2006, 
 %% for example:
 \keypoints{\item Here is the first keypoint. what happens if it is a
  long keypoint, like this one. We want to see this wrap please.
-\item This is the second.
+\item This is the second keypoint.
 \item And here is the third keypoint
 }
 
@@ -212,7 +212,7 @@ School of Geosciences, University of Sydney, Madsen Building, Sydney, NSW 2006, 
 %% ------------------------------------------------------------------------ %%
 
 \section{Introduction}
-(Article text here)
+(Article text here.)
 
 \section{Carbonate platform evolution models}
 
@@ -224,7 +224,7 @@ python parallel docker open-source github multi-habitats
 
 \subsection{Large-scale forcings}
 
-temperature, salinity sea-level tectonics 
+temperature, salinity sea-level tectonics ph
 
 \subsection{Wave transformation}
 
@@ -238,41 +238,41 @@ SWAN, short for \textit{Simulating WAves Nearshore}, is a third-generation, fini
 
 \noindent In our model, shoaling and refraction are accounted for from a series of deep-water wave conditions through time in the absence of wind forcing. Hence to compute wave field generation, the model requires bathymetric conditions and definitions of offshore significant wave height, characteristic period of the energy spectrum and wave direction and associated spreading angle.
 
-\noindent To evaluate reef responses over several hundreds of years, the approach taken here does not examine temporal evolving wave fields, such as those produced during storm events and relies on SWAN stationary mode. In pyReef, the wave transformation model is generally performed for time intervals varying from $0.5$ to $10$ years. Our aim is to simulate realistic wave fields by imposing a sequence of wave forcing conditions (\textit{e.g.} series of fair-weather and/or storm events). At any given time interval, we define a percentage of activity for each deep-water wave conditions and the bathymetry is used to compute associated wave parameters. Possibility is given to derived these parameters for both low and high tides. 
+\noindent To evaluate reef responses over several hundreds of years, the approach taken here does not examine temporal evolving wave fields, such as those produced during storm events and relies on SWAN stationary mode. In pyReef, the wave transformation model is generally performed for time intervals varying from $0.5$ to $10$ years. Our aim is to simulate realistic wave fields by imposing a sequence of wave forcing conditions (\textit{e.g.} series of fair-weather and/or storm events). At any given time interval, we define a percentage of activity for each deep-water wave conditions and the bathymetry is used to compute associated wave parameters. Possibility is given to derived these parameters for both low and high tides.
 
-Combined with the climatic forcing described above, two additional wave factors could be adjusted in the model: the breaking parameter and the bottom friction. 
+Combined with the climatic forcing described above, two additional wave factors could be adjusted in the model: the breaking parameter and the bottom friction.
 
 \noindent In regions where wave height is close to water depth, wave breaking is an important source of energy dissipation on reefs \citep{Symonds95, Becker14}. This effect is typically approximated with a constant breaking parameter $\gamma_s$ \citep{Symonds95, Vetter10} which values have been calibrated for different reef systems \citep{Apotsos07, Vetter10, Monismith13, Franklin13, Rogers15}.
 
 \noindent The high rugosity of reefs plays a significant role on wave dynamics by increasing the frictional dissipation of wave energy flux \citep{Young89, Lowe05, Lowe15}. This dissipation is usually approximated with a wave roughness friction factor $f_w$ which values have been well constrained for sand grain \citep{Kamphuis75, Grant79, Dean91}. In phase-averaged wave action approach like SWAN, this bottom dissipation is parameterised as a function of wave excursion to bottom roughness scale with a maximum value of 0.3 for $f_w$ \citep{Jonsson66, Madsen88}. Several studies \citep{Nelson96, Lowe05, Lentz15, Rogers15, Monismith15} indicates that this roughness factor can be much higher for reef systems (\textit{i.e.} up to 5.0 for reef platform in the Red Sea \citep{Lentz15}). To better estimate the impact of reef rugosity on frictional dissipation, we have modified the existing formulation for $f_w$ in SWAN and used the proposed parameterisation from \citet{Rogers15} based on  \citet{Swart74}:
 \begin{equation}
-\def\arraystretch{1.4}
-f_w=\left\{
-                \begin{array}{ll}
-                  exp\left[ a_1 \left( A_b / k_N \right)^{a_2} + a_3\right], \; A_b/k_N \ge 0.0369 \\
-                  50, \; A_b/k_N < 0.0369 
-                \end{array}
-              \right.
-\end{equation}  
+  \def\arraystretch{1.4}
+  f_w=\left\{
+    \begin{array}{ll}
+      exp\left[ a_1 \left( A_b / k_N \right)^{a_2} + a_3\right], \; A_b/k_N \ge 0.0369 \\
+      50, \; A_b/k_N < 0.0369
+    \end{array}
+  \right.
+\end{equation}
 \noindent where $A_b$ is the wave excursion distance, $k_N$ is the bottom roughness scale and the coefficients $a_1=$5.213, $a_2=-$0.194, and $a_3=-$5.977 have been set based on \citet{Rogers15}  Palmyra study. Alternate coefficient from \citet{Nielsen92} can also be used ($a_1=$5.5, $a_2=-$0.2, and $a_3=-$6.3). For large values of $A_b/k_N$, this formulation is similar to the one from Madsen et al. [1988] (implemented in SWAN), but extends the parameterisation for lower $A_b/k_N$. In pyReef, the bottom friction is based on the proposed formulation and requires the definition of the bottom roughness scale ($k_N$) which values is generally set to 2-3 times the characteristic diameters of the studied region \citep{Nielsen92, Lowe05, Rogers15}.
 
 \noindent For each forcing conditions, the wave transformation model computes and returns the significant wave height, the mean wave direction and the root-mean-square value of the maxima of the orbital velocity near the bottom. These parameters are subsequently used to evaluate the long-term hydrodynamic forces active over the simulated region.
 
 \subsection{Long-term wave-driven circulation}
 
-Flow circulation in and around reef platforms depends on the complex interactions between the overlying water motion and the three-dimensional bottom roughness formed by reef organisms. Attempts to numerically simulate flow dynamics around individual coral colonies have been proposed \citep{Kaandorp03, Chang09, Chindapol13} but such models require the flows to be solve down to few millimetres scale and are beyond the scope of our approach. Here we assume that the flow circulation in the reef platform is mainly driven by waves and regional-scale drivers of reefs hydrodynamics such as coastal upwelling or ocean currents are ignored. Numerical studies of wave-driven flow around reef systems commonly use depth-averaged Navier-Stokes equations \citep{Raupach82, Symonds95, Lowe05, Lowe09, Pomeroy12, Taebi11}. In the context of millennial scale reef platform evolution, these methods however are still computationally prohibitive. In pyReef, the proposed method consists in producing \textit{snapshots} of wave-driven circulation distribution resulting from series of deep-water wave scenarios by computing time-averaged cross-shore and longshore currents.  
+Flow circulation in and around reef platforms depends on the complex interactions between the overlying water motion and the three-dimensional bottom roughness formed by reef organisms. Attempts to numerically simulate flow dynamics around individual coral colonies have been proposed \citep{Kaandorp03, Chang09, Chindapol13} but such models require the flows to be solve down to few millimetres scale and are beyond the scope of our approach. Here we assume that the flow circulation in the reef platform is mainly driven by waves and regional-scale drivers of reefs hydrodynamics such as coastal upwelling or ocean currents are ignored. Numerical studies of wave-driven flow around reef systems commonly use depth-averaged Navier-Stokes equations \citep{Raupach82, Symonds95, Lowe05, Lowe09, Pomeroy12, Taebi11}. In the context of millennial scale reef platform evolution, these methods however are still computationally prohibitive. In pyReef, the proposed method consists in producing \textit{snapshots} of wave-driven circulation distribution resulting from series of deep-water wave scenarios by computing time-averaged cross-shore and longshore currents.
 
 In nearshore environments, longshore current runs parallel to the shore and is generated by the radiation stresses associated with the breaking process for obliquely incoming waves and by the surplus water which is carried across the breaker zone towards the shoreline \citep{Longuet-Higgins70}. This current affect the transport and transfer of mass (loose carbonate sands, nutrients and carbon) in the nearshore reef waters \citep{Hamner88, Monismith07, Lowe15}. Many empirical formulation of longshore current have been proposed since the initial work from   \citet{Longuet-Higgins64}  \citep{Komar70, Komar75, Galvin87, Reniers97, Ruessink01, Grasmeijer03}. In pyReef, the approach from \citet{Komar75} is used to calculate the longshore current velocity ($\vec{v_l}$) in the middle of the breaking zone:
 \begin{equation}
 \vec{v_l} = \kappa_l u_{b} cos(\theta) sin(\theta) \vec{k}
 \end{equation}
-where $u_b$ is the maximum near-bed orbital velocity obtained from SWAN, $\theta$ the angle of incidence of the incoming waves, $\kappa_l$  a scaling parameter and $\vec{k}$ the unit vector parallel to the breaking depth contour. For wave rays approaching the reef at on oblique angle, the component of wave energy flux parallel to the reef shore will drives this longshore velocity. The calculation of the angle of incidence in pyReef is quite straightforward and requires an estimate of wave breaking depth (defined for each wave scenario) and wave direction (obtained from the wave transformation model). 
+where $u_b$ is the maximum near-bed orbital velocity obtained from SWAN, $\theta$ the angle of incidence of the incoming waves, $\kappa_l$  a scaling parameter and $\vec{k}$ the unit vector parallel to the breaking depth contour. For wave rays approaching the reef at on oblique angle, the component of wave energy flux parallel to the reef shore will drives this longshore velocity. The calculation of the angle of incidence in pyReef is quite straightforward and requires an estimate of wave breaking depth (defined for each wave scenario) and wave direction (obtained from the wave transformation model).
 
 In addition to longshore current, two types of cross-shore velocities are simulated in pyReef. First we estimate the onshore velocity which is essential in predicting the shoreward transport of broken carbonate particles during fair-weather periods  \citep{Elfrink99, Ruessink98}. In our model, we assume a linear dependency between the near-bed orbital velocity and the intensity of this onshore current $\vec{v_o}$:
 \begin{equation}
 \vec{v_o} = \kappa_o u_b \vec{n}
 \end{equation}
-with $u_b$ the maximum near-bed orbital velocity, $\vec{n}$ the unit vector parallel to the incoming wave direction and $\kappa_o$ a correction factor. $\kappa_o$ can be derived from local shallow reef water conditions and reflects natural wave skewness and asymmetry which are known to play a central part in cross-shore velocity profile \citep{Grasmeijer03, Crawford03}. The onshore velocity ($\vec{v_o}$) is usually associated to the wave crest and is stronger than the one due to the wave trough \citep{Isobe82, Grasmeijer03}. 
+with $u_b$ the maximum near-bed orbital velocity, $\vec{n}$ the unit vector parallel to the incoming wave direction and $\kappa_o$ a correction factor. $\kappa_o$ can be derived from local shallow reef water conditions and reflects natural wave skewness and asymmetry which are known to play a central part in cross-shore velocity profile \citep{Grasmeijer03, Crawford03}. The onshore velocity ($\vec{v_o}$) is usually associated to the wave crest and is stronger than the one due to the wave trough \citep{Isobe82, Grasmeijer03}.
 
 During strong wave conditions, a second type of wave-induced cross-shore velocity is defined in pyReef and simulates an offshore-directed steady current referred to as undertow. The time-averaged and depth-averaged undertow velocity $\vec{v_u}$ is derived from the mass flux due to the wave motion and surface roller \citep{Svendsen87}. Under normal incident periodic waves, \citet{Longuet-Higgins75} showed that the depth- and time-averaged undertow velocity is related to the wave's kinetic energy density and phase speed. Assuming  equipartition of kinetic and potential wave energy, the total energy density of the wave is approximately \citep{Svendsen84}:
 \begin{equation}
@@ -283,10 +283,38 @@ with $\rho$ the ocean density and  $H$ the root-mean-square wave height returned
 \vec{v_u} = - \kappa_u \frac{\sqrt{g h}}{8} \left(\frac{H}{h} \right)^2 \vec{n}
 \end{equation}
 with $\kappa_u$ an empirical coefficient \citep{Kobayashi98}, $g$ the gravitational acceleration, $h$ the water depth and $\vec{n}$ the unit vector parallel to the incoming wave direction.
-   
+
 \subsection{Calcareous sand transport}
+
+Several studies indicate sufficient variations in the hydraulic properties between siliceous and calcareous sand that would lead to different transport mechanisms of the sediments. Despite these observations and to our knowledge, sediment transport models for calcareous sands under wave and current actions have not yet been proposed.
+
+In pyReef, sediment transport induced by wave and current dynamic is derived from Soulsby and Van Rijn formulation \citep{Soulsby97}. The method computes the total load transport rate resulting from the addition of bed load and suspended load for each type of loose carbonate sands initially set by the user. The model also assumes that each of sand particles are perfectly sorted. The method suits well with our approach as it can be applied in a quasi-steady form. The transport rate is defined by:
+\begin{equation}
+q_t = (A_{sb}+A_{ss}) \bar{v} \left[ \sqrt{\bar{v}^2 + \frac{0.018}{C_D}u_b} - \bar{u_{cr}}\right]^{2.4} (1-1.6 \nabla z)
+\end{equation}
+\noindent where $\bar{v}$ is the depth-averaged current velocity obtained from the long-term wave driven circulation model defined in previous section, $C_D$ is the drag coefficient (due to current alone) and $\nabla z$ the slope. The bed load transport $A_{sb}$ is given by:
+\begin{equation}
+A_{sb}=\frac{0.005h(d/h)^{1.2}}{(s-1)gd}
+\end{equation}
+\noindent with $s$ is the relative density of sediments and $d$ is the median grain diameter. The suspended load transport $A_{ss}$ is obtained from the following formula:
+\begin{equation}
+A_{ss}=\frac{0.012hd_{\star}^{-0.6}}{(s-1)gd}
+\end{equation}
+\noindent where $d_{\star}$ refers to the dimensionless particle diameter.
+
+\noindent The threshold current velocity ($\bar{u_{cr}}$) of motion follows:
+\begin{equation}
+  \arraycolsep=1.4pt\def\arraystretch{1.4}
+  \bar{u_{cr}}=\left\{
+    \begin{array}{ll}
+      0.19\,d\,^{0.1}\,log_{10}(4h/d), & 0.1 \ge d \ge 0.5 \, \textrm{mm} \\
+      8.5\,d\,^{0.6}\,log_{10}(4h/d), & 0.5 \ge d \ge 2. \, \textrm{mm}
+    \end{array}
+  \right.
+\end{equation}
+
+
 transport formulation multi-sediment stratigraphy
-soulsby van rijn
 Initiation of Motion of Calcareous Sand
 diffusion
 
@@ -301,7 +329,7 @@ The fuzzy model simulates the deposition of reefs and carbonate facies through i
 
 impact of storms on carbonate evolution (model with fair weather and model with 1 storm and after 2 storms)
 
-impact of sea-level change and thermal subsidence 
+impact of sea-level change and thermal subsidence
 
 impact of change in pH and ocean temperature
 
@@ -504,6 +532,9 @@ Ruessink, B. G., K. T. Houwman, and P. Hoekstra (1998), The systematic contribut
 
 \bibitem[{\textit{Ruessink et al.}(2001)}]{Ruessink01}
 Ruessink, B. G., J. R. Miles, F. Feddersen, R. T. Guza, and S. Elgar (2001), Modeling the alongshore current on barred beaches.  \textit{J. Geophys. Res.}, \textit{106}, 22451--22464.
+
+\bibitem[{\textit{Soulsby}(1997)}]{Soulsby97}
+Soulsby, R. (1997) Dynamics of marine sand: A manual for practical applications. Thomas Telford Publications, London, 249 pp.
 
 \bibitem[{\textit{Symonds et al.}(1995)}]{Symonds95}
 Symonds, G., K. P. Black, and I. R. Young (1995), Wave-driven flow over shallow reefs, \textit{J. Geophys. Res.}, \textit{100(C2)}, 2639--2648, doi:10.1029/94JC02736.
@@ -785,4 +816,3 @@ Math coded inside display math mode \[ ...\]
 % \end{sidewaystable}
 %
 %
-
