@@ -286,9 +286,9 @@ with $\kappa_u$ an empirical coefficient \citep{Kobayashi98}, $g$ the gravitatio
 
 \subsection{Calcareous sand transport}
 
-Several studies indicate sufficient variations in the hydraulic properties between siliceous and calcareous sand that would lead to different transport mechanisms of the sediments. Despite these observations and to our knowledge, sediment transport models for calcareous sands under wave and current actions have not yet been proposed.
+To our knowledge, transport law for calcareous sand based on their hydraulic characteristics has not been proposed yet. It has been recognised \citep{Prager96, Day97, Smith04} that variations in the hydraulic properties between siliceous and calcareous sand due to both their shapes and fall velocities lead to different transport behaviors. From flume experiments, \citet{Smith05} shows that transport models designed for siliceous particles might be applied after a correction factor has been introduced. From their experiment, the model of \citet{Engelund67} seems to provide the best fit with their dataset, however they conclude that these corrections are not universally applicable.
 
-In pyReef, sediment transport induced by wave and current dynamic is derived from Soulsby and Van Rijn formulation \citep{Soulsby97}. The method computes the total load transport rate resulting from the addition of bed load and suspended load for each type of loose carbonate sands initially set by the user. The model also assumes that each of sand particles are perfectly sorted. The method suits well with our approach as it can be applied in a quasi-steady form. The transport rate is defined by:
+\noindent Therefore, in pyReef, we have chosen to build our transport model based on a classical approach. Assuming sediment transport induced by waves and currents, our method is derived from Soulsby and Van Rijn formulation \citep{Soulsby97}. We compute the total load transport rate resulting from the addition of bed load and suspended load for each type of loose carbonate sands initially set by the user. The model also assumes that each of sand particles are perfectly sorted. The method suits well with our approach as it can be applied in a quasi-steady form. The transport rate is defined by:
 \begin{equation}
 q_t = (A_{sb}+A_{ss}) \bar{v} \left[ \sqrt{\bar{v}^2 + \frac{0.018}{C_D}u_b} - \bar{u_{cr}}\right]^{2.4} (1-1.6 \nabla z)
 \end{equation}
@@ -302,7 +302,7 @@ A_{ss}=\frac{0.012hd_{\star}^{-0.6}}{(s-1)gd}
 \end{equation}
 \noindent where $d_{\star}$ refers to the dimensionless particle diameter.
 
-\noindent The threshold current velocity ($\bar{u_{cr}}$) of motion follows:
+\noindent The threshold current velocity of motion ($\bar{u_{cr}}$) is defined by:
 \begin{equation}
   \arraycolsep=1.4pt\def\arraystretch{1.4}
   \bar{u_{cr}}=\left\{
@@ -313,7 +313,7 @@ A_{ss}=\frac{0.012hd_{\star}^{-0.6}}{(s-1)gd}
   \right.
 \end{equation}
 
-
+active layer 
 transport formulation multi-sediment stratigraphy
 Initiation of Motion of Calcareous Sand
 diffusion
@@ -430,11 +430,17 @@ Cox, D. T. and N. Kobayashi (1998), Application of an Undertow Model to Irregula
 \bibitem[{\textit{Crawford and Hay}(2003)}]{Crawford03}
 Crawford, A. M., and A. E. Hay (2003), Wave orbital velocity skewness and linear transition ripple migration: Comparison with weakly nonlinear theory, \textit{J. Geophys. Res.}, \textit{108}, 3091, doi:10.1029/2001JC001254.
 
+\bibitem[{\textit{Dai}(1997)}]{Day97}
+Dai, J. (1997), Engineering Characteristics of Tropical Island Beaches. Master's Thesis, Department of Ocean Engineering, University of Hawaii, Honolulu, Hawaii.
+
 \bibitem[{\textit{Dean and Dalrymple}(1991)}]{Dean91}
 Dean, R. G., and R. A. Dalrymple (1991), Water wave mechanics for engineers and scientists, \textit{Advanced Series on Ocean Engineering}, vol. 2, World Sci., Hackensack, N. J.
 
 \bibitem[{\textit{Elfrink et al.}(1999)}]{Elfrink99}
 Elfrink, B., K. A. Rakha, R. Deigaard, and I. Br{\o}ker (1999), Effect of near-bed velocity skewness on cross-shore sediment transport,  \textit{Proceedings Coastal Sediments. ASCE, Reston, VA, USA}, pp. 33--47.
+
+\bibitem[{\textit{Engelund and Hansen}(1967)}]{Engelund67}
+Engelund, F., and E. Hansen (1967), A Monograph on Sediment Transport. Technisk Forlag, Copenhagen, Denmark.
 
 \bibitem[{\textit{Franklin et al.}(2013)}]{Franklin13}
 Franklin, G., I. Marin~o-Tapia, and A. Torres-Freyermuth (2013), Effects of reef roughness on wave setup and surf zone currents, \textit{J. Coastal Res.}, \textit{Special Issue 65}, 2005--2010.
@@ -449,8 +455,7 @@ Grant, W. D., and O. S. Madsen (1979), Combined wave and current interaction wit
 Grasmeijer, B. T., and B. G.Ruessink (2003), Modeling of waves and currents in the nearshore: parametric vs. probabilistic approach, \textit{Coastal Engineering}, \textit{49}, 185--207.
 
 \bibitem[{\textit{Hamner and Wolanski}(1988)}]{Hamner88}
-Hamner, W., and E. Wolanski (1988), Hydrodynamic forcing functions and biological processes on coral reefs: astatus review, \textit{In Proceedings of the 6th International Coral Reef Symposium, Vol. 1: Plenary Addresses and Status Review, ed. JH Choat, D Barnes, MA Borowitzka, JC Coll, PJ Davies, et al.}, pp. 103--13. Townsville, Aust.: Int. Coral Reef Symp. Exec. Comm.
-
+Hamner, W., and E. Wolanski (1988), Hydrodynamic forcing functions and biological processes on coral reefs: a status review, \textit{In Proceedings of the 6th International Coral Reef Symposium, Vol. 1: Plenary Addresses and Status Review, ed. JH Choat, D Barnes, MA Borowitzka, JC Coll, PJ Davies, et al.}, pp. 103--13. Townsville, Aust.: Int. Coral Reef Symp. Exec. Comm.
 \bibitem[{\textit{Hasselmann et al.}(1973)}]{Hasselmann73}
 Hasselmann, K., et al. (1973), Measurements of wind-wave growth and swell decay during the Joint North Sea Wave Project (JONSWAP), \textit{Dtsch. HydrogrZ. 2}, Suppl., 1 (A8), 1--95.
 
@@ -514,10 +519,12 @@ Monismith, S. G., L. Herdman, S. Ahmerkamp, and J. Hench (2013), Wave transforma
 Nelson, R. C. (1996), Hydraulic roughness of coral reef platforms, \textit{Appl. Ocean Res.}, \textit{18(5)}, 265--274.
 
 \bibitem[{\textit{Nielsen}(1992)}]{Nielsen92}
-Nielsen, P (1992), \textit{Coastal Bottom Boundary Layers and Sediment Transport, Advanced Series on Ocean Engineering}, vol. 4, World Sci., Hackensack, N. J.
+Nielsen, P. (1992), \textit{Coastal Bottom Boundary Layers and Sediment Transport, Advanced Series on Ocean Engineering}, vol. 4, World Sci., Hackensack, N. J.
 
 \bibitem[{\textit{Pomeroy et al.}(2012)}]{Pomeroy12}
-Pomeroy A., R. J. Lowe, G. Symonds, A. van Dongeren,  and C. Moore (2012), The dynamics of infragravity wavetransformation over a fringing reef, \textit{J. Geophys. Res.}, \textit{117}, C11022.
+Pomeroy A., R. J. Lowe, G. Symonds, A. van Dongeren,  and C. Moore (2012), The dynamics of infragravity wave transformation over a fringing reef, \textit{J. Geophys. Res.}, \textit{117}, C11022.
+\bibitem[{\textit{Prager et al.}(1996)}]{Prager96}
+Prager, E. J., J. B. Southard, and E. R. Vivoni-Gallart (1996), Experiments on the entrainment threshold of well-sorted and poorly sorted carbonate sands, \textit{Sedimentology}, \textit{43}, 33--40.
 
 \bibitem[{\textit{Raupach and Shaw}(1982)}]{Raupach82}Raupach, M. R., and R. H. Shaw (1982), Averaging procedures for flow within vegetation canopies, \textit{Bound. Layer Me-teorol.}, \textit{22}, 79--90.
 
@@ -532,6 +539,12 @@ Ruessink, B. G., K. T. Houwman, and P. Hoekstra (1998), The systematic contribut
 
 \bibitem[{\textit{Ruessink et al.}(2001)}]{Ruessink01}
 Ruessink, B. G., J. R. Miles, F. Feddersen, R. T. Guza, and S. Elgar (2001), Modeling the alongshore current on barred beaches.  \textit{J. Geophys. Res.}, \textit{106}, 22451--22464.
+
+\bibitem[{\textit{Smith and Cheung}(2004)}]{Smith04}
+Smith, D. A., and K. F. Cheung (2004), Initiation of motion of calcareous sand, \textit{J. Hydraul. Eng., ASCE}, \textit{130}, 467--472.
+
+\bibitem[{\textit{Smith and Cheung}(2005)}]{Smith05}
+Smith, D. A., and K. F. Cheung (2005), Transport rate of calcareous sand in unidirectional flow, \textit{Sedimentology}, \textit{52}, 1009–-1020.
 
 \bibitem[{\textit{Soulsby}(1997)}]{Soulsby97}
 Soulsby, R. (1997) Dynamics of marine sand: A manual for practical applications. Thomas Telford Publications, London, 249 pp.
