@@ -286,6 +286,8 @@ with $\kappa_u$ an empirical coefficient \citep{Kobayashi98}, $g$ the gravitatio
 
 \subsection{Calcareous sand transport}
 
+A common feature of many reef systems is the presence of diverse marine communities, including seagrasses, coral reef organisms, sponges and mangroves. Simulating the evolution of these communities involves to resolve the details of their individual transport by waves and currents at fine scale and therefore requires very advanced and computationally expensive numerical models \citep{Lowe16}. The approach proposed here is based on a parametric transport model that consider the main hydrodynamic forces presented in previous section and  relies on coral assemblages rather than individual communinities. Coral assemblages are derived from coral composition and comparison with modern coral zonation. In the Southern Great Barrier Reef, from 22 identified fossil coral species, \citet{Dechnik15} was able to define four main coral assemblages and their palaeoenvironments. In pyReef, multiple coral assemblages can be defined and we assume that each assemblage is made of hard and loose corals. The hard coral (\textit{e.g.} living part) can either grow in-situ or be disintegrated in loose particles. Only the loose particles are subject to transport and we assume that these particles can be represented by a unique diameter and density value.
+
 To our knowledge, transport law for calcareous sand based on their hydraulic characteristics has not been proposed yet. It has been recognised \citep{Prager96, Day97, Smith04} that variations in the hydraulic properties between siliceous and calcareous sand due to both their shapes and fall velocities lead to different transport behaviors. From flume experiments, \citet{Smith05} shows that transport models designed for siliceous particles might be applied after a correction factor has been introduced. From their experiment, the model of \citet{Engelund67} seems to provide the best fit with their dataset, however they conclude that these corrections are not universally applicable.
 
 \noindent Therefore, in pyReef, we have chosen to build our transport model based on a classical approach. Assuming sediment transport induced by waves and currents, our method is derived from Soulsby and Van Rijn formulation \citep{Soulsby97}. We compute the total load transport rate resulting from the addition of bed load and suspended load for each type of loose carbonate sands initially set by the user. The model also assumes that each of sand particles are perfectly sorted. The method suits well with our approach as it can be applied in a quasi-steady form. The transport rate is defined by:
@@ -313,10 +315,19 @@ A_{ss}=\frac{0.012hd_{\star}^{-0.6}}{(s-1)gd}
   \right.
 \end{equation}
 
-active layer 
-transport formulation multi-sediment stratigraphy
-Initiation of Motion of Calcareous Sand
-diffusion
+In addition, to the above sediment transport model a multi-lithology non-linear diffusion model has been implemented to simulate secondary gravity-driven transport processes happening over longer temporal scale than wave and current induced ones. Based on \citet{Rivenaes97} and considering $n$ different types of coral assemblages, the following set of nonlinear partial differential equations (PDEs) are used to calculate the proportion of each assemblage $a_k$:
+\begin{equation}
+  \arraycolsep=2pt\def\arraystretch{2}
+    \begin{array}{l}
+      \sum_{k=1}^{n} a_k = 1 \\
+      \frac{\partial z}{\partial t} = \sum_{k=1}^{n} \frac{1}{c_k} \nabla \cdot ( \kappa_k a_k \nabla z) \\
+      d_l \frac{\partial a_k}{\partial t} + a_k \frac{\partial z}{\partial t} = \frac{1}{C_k} \nabla \cdot ( \kappa_k a_k \nabla z)
+    \end{array}
+\end{equation}
+
+\noindent where $\kappa_k$ denotes the diffusion coefficient for sediment $k$, $c_k$ is the compaction ratio and $d_l$ is a constant representing the thickness of a prescribed top layer, in which sediments are transported. This set of PDEs is solved using a fully explicit schema following the approach from \citet{Clark10}.
+
+active layer multi-sediment stratigraphy
 
 \subsection{Carbonate growth and disintegration}
 
@@ -424,6 +435,9 @@ Chang, S., C. Elkins, M. Alley, J. Eaton, and S. G. Monismith (2009), Flow insid
 \bibitem[{\textit{Chindapol et~al.}(2013)}]{Chindapol13}
 Chindapol N., J. A. Kaandorp, C. Cronemberger, T. Mass, and A. Genin (2013), Modelling growth and form of the scleractinian coral Pocillopora verrucosa and the influence of hydrodynamics, \textit{PLoS Comput. Biol.}, \textit{9}, e1002849
 
+\bibitem[{\textit{Clark et~al.}(2010)}]{Clark10}
+Clark, S. R., W. Wei, and X. Cai (2010), Numerical analysis of a dual-sediment transport model applied to Lake Okeechobee, Florida, \textit{in: Proceedings of the 9th International Symposium on Parallel and Distributed Computing, IEEE Computer Society Press}, pp. 189--194.
+
 \bibitem[{\textit{Cox and Kobayashi}(1998)}]{Cox98}
 Cox, D. T. and N. Kobayashi (1998), Application of an Undertow Model to Irregular Waves on Plane and Barred Beaches, \textit{J. Coast. Res.}, \textit{14}, 4, 1314--1324.
 
@@ -435,6 +449,9 @@ Dai, J. (1997), Engineering Characteristics of Tropical Island Beaches. Master's
 
 \bibitem[{\textit{Dean and Dalrymple}(1991)}]{Dean91}
 Dean, R. G., and R. A. Dalrymple (1991), Water wave mechanics for engineers and scientists, \textit{Advanced Series on Ocean Engineering}, vol. 2, World Sci., Hackensack, N. J.
+
+\bibitem[{\textit{Dechnik et al.}(2015)}]{Dechnik15}
+Dechnik, B., J. M. Webster, P. J. Davies, J.-C. Braga, and P. J., Reimer (2015), Holocene 'turn-on' and evolution of the Southern Great Barrier Reef: revisiting reef cores from the Capricorn Bunker Group, \textit{Marine Geology}, \textit{363}, 174--190.
 
 \bibitem[{\textit{Elfrink et al.}(1999)}]{Elfrink99}
 Elfrink, B., K. A. Rakha, R. Deigaard, and I. Br{\o}ker (1999), Effect of near-bed velocity skewness on cross-shore sediment transport,  \textit{Proceedings Coastal Sediments. ASCE, Reston, VA, USA}, pp. 33--47.
@@ -502,7 +519,10 @@ Lowe, R. J., J. L. Falter, M. D. Bandet, G. Pawlak, M. J. Atkinson, S. G. Monism
 Lowe, R.J., J. L. Falter, S. G. Monismith SG, and M. J. Atkinson (2009), A numerical study of circulation in a coastal reef-lagoon system, \textit{J. Geophys. Res.}, \textit{114}, C06022.
 
 \bibitem[{\textit{Lowe and Falter}(2015)}]{Lowe15}
-Lowe, R. J., and J. L. Falter (2015). Oceanic forcing of coral reefs, \textit{Annu. Rev. Mar. Sci.}, \textit{7}, 43--66, doi:10.1146/annurev-marine-010814-015834.
+Lowe, R. J., and J. L. Falter (2015), Sediment transport processes within coral reef and vegetated coastal ecosystems: a review, \textit{WAMSI Dredging Science Node, Report Theme 3, Project 3.1.2}, 19 p.
+
+\bibitem[{\textit{Lowe and Ghisalberti}(2016)}]{Lowe16}
+Lowe, R. J., and M. Ghisalberti (2016), Oceanic forcing of coral reefs, \textit{Annu. Rev. Mar. Sci.}, \textit{7}, 43--66, doi:10.1146/annurev-marine-010814-015834.
 
 \bibitem[{\textit{Madsen et al.}(1988)}]{Madsen88}
 Madsen, O. S., Y. Poon, and H. C. Graber (1988), Spectral wave attenuation by bottom friction: Theory, \textit{Coastal Eng. Conf.}, \textit{1(21)}, 492--504.
@@ -530,6 +550,9 @@ Prager, E. J., J. B. Southard, and E. R. Vivoni-Gallart (1996), Experiments on t
 
 \bibitem[{\textit{Reniers and Battjes}(1997)}]{Reniers97}
 Reniers, A. J. H. M., and J. A. Battjes, (1997), A laboratory study of long shore currents over barred and non-barred beaches,  \textit{Coast. Eng.}, \textit{30(1-2)}, 1--21.
+
+\bibitem[{\textit{Rivenaes}(1997)}]{Rivenaes97}
+Rivenaes, J. C. (1997), Application of a dual-lithology, depth-dependent diffusion equation in stratigraphic simulation, \textit{Basin Research}, \textit{4}, 2, 133--146.
 
 \bibitem[{\textit{Rogers el al.}(2015)}]{Rogers15}
 Rogers, J. S., S. G. Monismith, D. A. Koweek, and R. B. Dunbar (2015), Wave dynamics of a Pacific Atoll with high frictional effects, \textit{J. Geophys. Res. Oceans}, \textit{120}, doi:10.1002/ 2015JC011170.
