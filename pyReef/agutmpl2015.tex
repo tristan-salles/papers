@@ -327,7 +327,7 @@ In addition, to the above sediment transport model a multi-lithology non-linear 
 
 \noindent where $\kappa_k$ denotes the diffusion coefficient for sediment $k$, $c_k$ is the compaction ratio and $d_l$ is a constant representing the thickness of a prescribed top layer, in which sediments are transported. This set of PDEs is solved using a fully explicit schema following the approach from \citet{Clark10}.
 
-active layer multi-sediment stratigraphy
+To simulate bed morphology and stratigraphic evolution a classical multi-level bed framework tracks the distribution of every coral assemblage through time by layers (\citet{Warner08} and reference therein). In pyReef, each layer stores the bulk properties including thickness and percentage of hard and loose coral assemblages. An active layer at the top of the stratigraphic pile is used to calculate the transport of the calcareous sand from both the wave-current driven and diffusion-based models presented above.
 
 \subsection{Carbonate growth and disintegration}
 
@@ -588,6 +588,9 @@ Taebi, S., R. J. Lowe, C. B. Pattiaratchi, G. N. Ivey,  G. Symonds, and R. Brink
 
 \bibitem[{\textit{Vetter et al.}(2010)}]{Vetter10}
 Vetter, O., J. M. Becker, M. A. Merrifield, A.-C. P\'equignet, J. Aucan, S. J. Boc, and C. E. Pollock (2010), Wave setup over a Pacific Island fringing reef, \textit{J. Geophys. Res.}, \textit{115}, C12066, doi:10.1029/2010JC006455.
+
+\bibitem[{\textit{Warner et al.}(2008)}]{Warner08}
+Warner, J. C., C. R. Sherwood, R. P. Signell, C. Harris, and H. G. Arango (2008), Development of a three-dimensional, regional, coupled wave, current, and sediment-transport model, \textit{Computers and Geosciences}, \textit{34}, 1284--1306.
 
 \bibitem[{\textit{Young}(1989)}]{Young89}
 Young, I. R. (1989), Wave transformation over coral reefs, \textit{J. Geophys. Res.}, \textit{94(C7)}, 9779--9789, doi:10.1029/JC094iC07p09779.

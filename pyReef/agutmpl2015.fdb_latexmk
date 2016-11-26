@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1480120576 "agutmpl2015.tex" "agutmpl2015.pdf" "agutmpl2015" 1480120577
+["pdflatex"] 1480122124 "agutmpl2015.tex" "agutmpl2015.pdf" "agutmpl2015" 1480122125
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1136768653 1328 c834bbb027764024c09d3d2bf908b5f0 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm" 1136768653 1332 1fde11373e221473104d6cc5993f046e ""
@@ -40,8 +40,8 @@
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1444952227 3849860 0a1f4ee580c174d102350eeb4c6a2598 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
   "agutex2015.cls" 1479658754 222182 2a897aff2f17c131dcaa41f98e0e854a ""
-  "agutmpl2015.aux" 1480120577 6173 d55dd20c417ce7300de03f30e55ec8b5 ""
-  "agutmpl2015.tex" 1480120574 47274 d68834fec76544bc3a91f5c1f877db11 ""
+  "agutmpl2015.aux" 1480122125 6256 660ab21d04dccb35f77ede41c79ad340 ""
+  "agutmpl2015.tex" 1480122123 48045 2a70f35b10710ea83ec24be16431f3ec ""
   (generated)
   "agutmpl2015.aux"
   "agutmpl2015.log"
