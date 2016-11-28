@@ -231,17 +231,17 @@ In this section, a new, deterministic three-dimensional carbonate forward model,
 
 At basin-scale carbonate deposits are strongly controlled by large-scale forcings. Extrinsic processes will affect both the morphology of reef systems and stratigraphy of carbonate depositional sequences by modifying the carbonates production \citep{Hill06}. In pyReef, the following set of external forcing mechanisms could be considered: sea-level oscillations, subsidence/uplift rates, and regional oceanic conditions (\textit{i.e.} sea temperature and acidity).
 
-\noindent Accomodation space is a function of relative sea-level changes, which is the sum effect of eustatic sea-level changes, tectonic changes and sediment supply. Several studies have shown that the rates of accretion of coral reefs are largely constrained by changes in accomodation space (\citet{VanWoesik15} or \citet{Roff15} to cite a few). In our model, a sea-level curve can be imported from either a known eustatic curve (\textit{e.g.} such as the ones from \citet{Haq87} or \citet{Miller05}) or directly defined by the user. The tectonic changes are provided as a series of temporal maps. Each map can have variable spatial cumulative displacements making it possible to simulate complex tectonic evolution with both uplift and subsidence conditions. These two forcing mechanisms will directly control the evolution of the hydrodynamic conditions and the associated sediment transport regime as well as the carbonate production described in the following subsections.
-
-\noindent Changing sea surface temperatures and ocean acidification are known to have significant effects across reef systems by controlling the rate of coral reef growth \citep{Shaw12, Andersson13, Zhang13}. In pyReef, long-term regional scale evolution of either ocean's temperature or pH are set by the user as temporal-dependent functions. These functions are then used to control the carbonate production and disintegration as explained in subsection \ref{fuzzy}.
-
 \begin{figure}
 \centering
 \noindent\includegraphics[width=20pc]{figs/fig1.pdf}
-\caption{A schematic of 2D coral reef evolution model illustrating the main variables and forces simulated with \textit{pyReef}, where $w$ is wave forcing conditions, $c$ is the long-term ocean circulation, $sl$ is the sea-level, $t$ is the tectonic and $ph$ and $T$ are the ocean's acidity and temperature respectively.
+\caption{A schematic of 2D coral reef evolution model illustrating the main variables and forces simulated with \textit{pyReef}, where \textbf{w} is wave forcing conditions, \textbf{c} is the long-term ocean circulation, \textbf{sl} is the sea-level, \textbf{t} is the tectonic and \textbf{ph} and \textbf{T} are the ocean's acidity and temperature respectively. The stratigraphic evolution and bed morphology are computes through time and are made of multiple coral assemblages.
 }
 \label{pyreef_sketch}
 \end{figure}
+
+\noindent Accomodation space is a function of relative sea-level changes, which is the sum effect of eustatic sea-level changes, tectonic changes and sediment supply. Several studies have shown that the rates of accretion of coral reefs are largely constrained by changes in accomodation space (\citet{VanWoesik15} or \citet{Roff15} to cite a few). In our model, a sea-level curve can be imported from either a known eustatic curve (\textit{e.g.} such as the ones from \citet{Haq87} or \citet{Miller05}) or directly defined by the user. The tectonic changes are provided as a series of temporal maps. Each map can have variable spatial cumulative displacements making it possible to simulate complex tectonic evolution with both uplift and subsidence conditions. These two forcing mechanisms will directly control the evolution of the hydrodynamic conditions and the associated sediment transport regime as well as the carbonate production described in the following subsections.
+
+\noindent Changing sea surface temperatures and ocean acidification are known to have significant effects across reef systems by controlling the rate of coral reef growth \citep{Shaw12, Andersson13, Zhang13}. In pyReef, long-term regional scale evolution of either ocean's temperature or pH are set by the user as temporal-dependent functions. These functions are then used to control the carbonate production and disintegration as explained in subsection \ref{fuzzy}.
 
 \subsection{Wave transformation}
 
@@ -345,6 +345,14 @@ In addition, to the above sediment transport model a multi-lithology non-linear 
 \noindent where $\kappa_k$ denotes the diffusion coefficient for sediment $k$, $c_k$ is the compaction ratio and $d_l$ is a constant representing the thickness of a prescribed top layer, in which sediments are transported. This set of PDEs is solved using a fully explicit schema following the approach from \citet{Clark10}.
 
 To simulate bed morphology and stratigraphic evolution a classical multi-level bed framework tracks the distribution of every coral assemblage through time by layers (\citet{Warner08} and reference therein). In pyReef, each layer stores the bulk properties including thickness and percentage of hard and loose coral assemblages. An active layer at the top of the stratigraphic pile is used to calculate the transport of the calcareous sand from both the wave-current driven and diffusion-based models presented above.
+
+\begin{figure*}
+\centering
+\noindent\includegraphics[width=37pc]{figs/fig3.pdf}
+\caption{Diagram of fuzzy logic process used in pyReef to evaluate a specific coral assemblage (assemblage 1) growth rate. The approach is illustrated from a point on the carbonate platform with a water depth of 8 m, an average sedimentation rate of 5 m/kyr and an average bottom orbital velocity of 1.5 m/s. The production rate is related to three control variables in this example: the \textit{sedimentation rate}, the \textit{water depth} and the \textit{wave energy}. For each of these variables two membership functions are defined (as an example the water depth is described using the \textit{shallow depth} and \textit{medium depth} functions). The combination of these functions forms a fuzzy set. Two fuzzy rules (based on \textit{if-then} rules) control the production of coral assemblage 1. Each production membership function is then restricted by the minimum (\textit{and} operator) of the membership degree values obtained from combination of the functions active in the considered rule. Aggregation of the truncated production membership functions is done by overlapping the curves and taking the maximum values. Finally the evaluation of the production rate is done through defuzzification by employing the centroid method which returns a \textit{crisp} value of 1.05 m/kyr for the considered point.
+}
+\label{fuzzy}
+\end{figure*}
 
 \subsection{Carbonate growth and disintegration}\label{fuzzy}
 
