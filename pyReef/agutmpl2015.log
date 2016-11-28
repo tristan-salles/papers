@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.16)  26 NOV 2016 12:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.16)  28 NOV 2016 11:30
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **agutmpl2015.tex
 (./agutmpl2015.tex
@@ -203,47 +202,71 @@ LaTeX Font Info:    ... okay on input line 117.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 117.
 LaTeX Font Info:    ... okay on input line 117.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 206.
+(Font)              <8> on input line 205.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 206.
+(Font)              <6> on input line 205.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 206.
+(Font)              <5> on input line 205.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 206.
+(Font)              <7> on input line 205.
 \figandtabbox0=\box56
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9> on input line 214.
+(Font)              <9> on input line 213.
  [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2]
-Overfull \vbox (1.0pt too high) has occurred while \output is active []
+Underfull \hbox (badness 10000) in paragraph at lines 339--343
 
- [3]
+ []
+
+[3]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
  [4]
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
+Missing character: There is no â in font cmr8!
+Missing character: There is no € in font cmr8!
+Missing character: There is no ” in font cmr8!
+Missing character: There is no â in font cmr8!
+Missing character: There is no € in font cmr8!
+Missing character: There is no “ in font cmr8!
+
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
 []\OT1/cmr/m/n/8 Young, I. R. (1989), Wave trans-for-ma-tion over
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 603--604
-\OT1/cmr/m/n/8 coral reefs, \OT1/cmr/m/it/8 J. Geo-phys. Res.\OT1/cmr/m/n/8 , \OT1/cmr/m/it/8 94(C7)\OT1/cmr/m/n/8 , 9779--9789,
+Underfull \hbox (badness 10000) in paragraph at lines 641--642
+\OT1/cmr/m/n/8 coral reefs, \OT1/cmr/m/it/8 J. Geo-phys. Res.\OT1/cmr/m/n/8 , \
+OT1/cmr/m/it/8 94(C7)\OT1/cmr/m/n/8 , 9779--9789,
  []
 
 [5] (./agutmpl2015.aux) ) 
 Here is how much of TeX's memory you used:
- 1188 strings out of 493089
- 13584 string characters out of 6134841
- 99429 words of memory out of 5000000
- 4746 multiletter control sequences out of 15000+600000
+ 1200 strings out of 493089
+ 13715 string characters out of 6134841
+ 102421 words of memory out of 5000000
+ 4758 multiletter control sequences out of 15000+600000
  12594 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 23i,10n,25p,1281b,542s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on agutmpl2015.pdf (5 pages, 241715 bytes).
+ 23i,10n,25p,1400b,505s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmex10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+r6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.
+pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on agutmpl2015.pdf (5 pages, 246477 bytes).
 PDF statistics:
  84 PDF objects out of 1000 (max. 8388607)
  60 compressed objects within 1 object stream

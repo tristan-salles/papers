@@ -172,8 +172,7 @@ School of Geosciences, University of Sydney, Madsen Building, Sydney, NSW 2006, 
 % that are 100 characters or less, that are ultimately published
 % with the article.
 %% for example:
-\keypoints{\item Here is the first keypoint. what happens if it is a
- long keypoint, like this one. We want to see this wrap please.
+\keypoints{\item Here is the first keypoint.
 \item This is the second keypoint.
 \item And here is the third keypoint
 }
@@ -331,7 +330,16 @@ To simulate bed morphology and stratigraphic evolution a classical multi-level b
 
 \subsection{Carbonate growth and disintegration}
 
-The fuzzy model simulates the deposition of reefs and carbonate facies through integration of local and global variables. Local-scale factors include basement relief, sea-level change, climate, latitude, water energy, water depth, background sedimentation rate, and substrate conditions. Regional and global-scale changes include relative sea-level change, climate, and latitude.
+The organisation of coral reef systems is known to be large and complex and we are still limited in our understanding of their temporal and spatial evolution \citep{Demicco98}. Additionally, most datasets of carbonate systems are often linguistic, context-dependent, and based on measurements with large uncertainties. Conventional deterministic techniques are often enable to address many of the significant variables which affect carbonate productivity \citep{Parcell98}.
+
+Alternative approaches such as fuzzy logic, which is by definition able to cope with these imprecisions \citep{Demicco01, Collin15}, have proven to be a viable alternative to simulate carbonate systems \citep{Salles11, Hattab13}. Fuzzy logic method is able to create logical propositions from qualitative data by using linguistic logic rules and \textit{fuzzy sets} \citep{Nordlund96}. These fuzzy sets are defined with continuous boundaries rather than \textit{crisp} discontinuous ones usually used in conventional approaches \citep{Meesters98}. In depth mathematical theory behind fuzzy logic method can be found in \citet{Zadeh65}, \citet{Zimmerman91} and \citet{Berkan97}.
+
+\noindent Based on a fuzzy logic approach, carbonate system evolution in pyReef is driven entirely by a set of linguistic rules whose variables are fully adjustable. Therefore, the utility and effectiveness of the approach is mostly based on the user's understanding of the modelled carbonate system. The technique is specifically useful to understand how particular variable, in isolation or in combination with other factors, influences carbonate depositional geometries and reef adaptation.
+
+In its current form, pyReef employs five types of control variables: depth, wave energy (derived from ocean bottom orbital velocity), sedimentation rate, ocean's temperature and acidity. For each of these variables, one can define a range of fuzzy sets using membership functions \citep{Nordlund99}. A membership function is a curve showing the degree of truth (\textit{i.e.} ranging between 0 and 1) of membership in a particular fuzzy set. In pyReef, these curves can be simple triangles, trapezoids, bell-shaped curves, or have more complicated shapes. Production and/or disintegration of any specific coral assemblage is then computed from a series of fuzzy rules. A fuzzy rule is a logic \textit{if-then} rule defined from the fuzzy sets \citep{Demicco01}. In our model, the combination of the fuzzy sets in each fuzzy rule is restricted to the \textit{and} operator. The amalgamation of competing fuzzy rules is usually referred to as a fuzzy system. Summation of multiple rules from the fuzzy system by truncation of the membership functions produces a new fuzzy answer in the form of a new membership set. The last step consists in computing a single number for this fuzzy set through \textit{defuzzification} \citep{Zadeh65}. In pyReef, the centroid (center of gravity) for the area below the membership set is taken as the \textit{defuzzified} output value.
+\\
+\\
+Coupling of the wave transformation approach (SWAN) with the long-term circulation and sediment transport models and with the fuzzy logic technique presented above allow for numerical analysis of carbonate platforms evolution, stratigraphic architecture reconstruction and provides a numerical framework to quantitatively assess reef system responses to climatic forcing over millennial scales.
 
 \section{Models setup}
 
@@ -423,6 +431,9 @@ Apotsos, A., B. Raubenheimer, S. Elgar, R. T. Guza, and J. A. Smith (2007), Effe
 \bibitem[{\textit{Becker et al.}(2014)}]{Becker14}
 Becker, J. M., M. A. Merrifield, and M. Ford (2014), Water level effects on breaking wave setup for Pacific Island fringing reefs, \textit{J. Geophys. Res. Oceans}, \textit{119}, 914--932, doi:10.1002/2013JC009373.
 
+\bibitem[{\textit{Berkan and Trubatch}(1997)}]{Berkan97}
+Berkan, R. C., and S. L. Trubatch (1997), Fuzzy Systems Design Principles: Building Fuzzy IF–THEN Rule Bases: Piscataway, N.J., IEEE Press, 496 p.
+
 \bibitem[{\textit{Booij et~al.}(1999)}]{Booij99}
 Booij N., R. Ris, and L. Holthuijsen (1999), A third-generation wave model for coastal regions. 1. Model description and validation, \textit{J. Geophys. Res.}, \textit{104},(C4), 7649--7666.
 
@@ -438,6 +449,9 @@ Chindapol N., J. A. Kaandorp, C. Cronemberger, T. Mass, and A. Genin (2013), Mod
 \bibitem[{\textit{Clark et~al.}(2010)}]{Clark10}
 Clark, S. R., W. Wei, and X. Cai (2010), Numerical analysis of a dual-sediment transport model applied to Lake Okeechobee, Florida, \textit{in: Proceedings of the 9th International Symposium on Parallel and Distributed Computing, IEEE Computer Society Press}, pp. 189--194.
 
+\bibitem[{\textit{Collin et~al.}(2015)}]{Collin15}
+Collin, A., K. Nadaoka, and L. Bernardo (2015), Mapping the Socio-Economic and Ecological Resilience of Japanese Coral Reefscapes across a Decade, \textit{ISPRS Int. J. Geo-Inf.}, \textit{4}, (2), 900--927.
+
 \bibitem[{\textit{Cox and Kobayashi}(1998)}]{Cox98}
 Cox, D. T. and N. Kobayashi (1998), Application of an Undertow Model to Irregular Waves on Plane and Barred Beaches, \textit{J. Coast. Res.}, \textit{14}, 4, 1314--1324.
 
@@ -452,6 +466,12 @@ Dean, R. G., and R. A. Dalrymple (1991), Water wave mechanics for engineers and 
 
 \bibitem[{\textit{Dechnik et al.}(2015)}]{Dechnik15}
 Dechnik, B., J. M. Webster, P. J. Davies, J.-C. Braga, and P. J., Reimer (2015), Holocene 'turn-on' and evolution of the Southern Great Barrier Reef: revisiting reef cores from the Capricorn Bunker Group, \textit{Marine Geology}, \textit{363}, 174--190.
+
+\bibitem[{\textit{Demicco}(1998)}]{Demicco98}
+Demicco, R. V. (1998), CYCOPATH 2-D, a two-dimensional, forward-model of cyclic sedimentation on carbonate platforms, \textit{Comput. Geosci.}, \textit{24}, 405--423.
+
+\bibitem[{\textit{Demicco and Klir}(2001)}]{Demicco01}
+Demicco, R. V., and G. J. Klir (2001), Stratigraphic simulations using fuzzy logic to model sediment dispersal, \textit{J. Petroleum Science and Engineering}, \textit{31}, 135--155.
 
 \bibitem[{\textit{Elfrink et al.}(1999)}]{Elfrink99}
 Elfrink, B., K. A. Rakha, R. Deigaard, and I. Br{\o}ker (1999), Effect of near-bed velocity skewness on cross-shore sediment transport,  \textit{Proceedings Coastal Sediments. ASCE, Reston, VA, USA}, pp. 33--47.
@@ -475,6 +495,9 @@ Grasmeijer, B. T., and B. G.Ruessink (2003), Modeling of waves and currents in t
 Hamner, W., and E. Wolanski (1988), Hydrodynamic forcing functions and biological processes on coral reefs: a status review, \textit{In Proceedings of the 6th International Coral Reef Symposium, Vol. 1: Plenary Addresses and Status Review, ed. JH Choat, D Barnes, MA Borowitzka, JC Coll, PJ Davies, et al.}, pp. 103--13. Townsville, Aust.: Int. Coral Reef Symp. Exec. Comm.
 \bibitem[{\textit{Hasselmann et al.}(1973)}]{Hasselmann73}
 Hasselmann, K., et al. (1973), Measurements of wind-wave growth and swell decay during the Joint North Sea Wave Project (JONSWAP), \textit{Dtsch. HydrogrZ. 2}, Suppl., 1 (A8), 1--95.
+
+\bibitem[{\textit{Hattab et al.}(2013)}]{Hattab13}
+Hattab, T., F. Ben Rais Lasram, C. Albouy, C. Sammari, M. S. Romdhane, P. Cury, F. Leprieur, and F. Le Loc'h (2013), The Use of a Predictive Habitat Model and a Fuzzy Logic Approach for Marine Management and Planning, \textit{PLoS ONE}, \textit{8}, (10), e76430. doi:10.1371/journal.pone.0076430
 
 \bibitem[{\textit{Holthuijsen et~al.}(1993)}]{Holthuijsen93}
 Holthuijsen L.~H, N. Booij, and R.~C. Ris (1993), A spectral wave model for the coastal zone, \textit{Proceedings of the 2nd international symposium on ocean wave measurement and analysis}, \textit{New Orleans, LA}, pp. 630--641.
@@ -527,6 +550,9 @@ Lowe, R. J., and M. Ghisalberti (2016), Oceanic forcing of coral reefs, \textit{
 \bibitem[{\textit{Madsen et al.}(1988)}]{Madsen88}
 Madsen, O. S., Y. Poon, and H. C. Graber (1988), Spectral wave attenuation by bottom friction: Theory, \textit{Coastal Eng. Conf.}, \textit{1(21)}, 492--504.
 
+\bibitem[{\textit{Meesters et al.}(1998)}]{Meesters98}
+Meesters, E. H., R. P. M. Bak, S. Westmacott, M. Ridgley, and S. Dollar (1998), A fuzzy logic model to predict coral reef development under nutrient stress, \textit{Conserv. Biol.}, \textit{12}, 957--965.
+
 \bibitem[{\textit{Monismith}(2007)}]{Monismith07}
 Monismith, S. G. (2007), Hydrodynamics of coral reefs, \textit{Annu. Rev. Fluid Mech.}, \textit{39}, 37--55.
 
@@ -540,6 +566,15 @@ Nelson, R. C. (1996), Hydraulic roughness of coral reef platforms, \textit{Appl.
 
 \bibitem[{\textit{Nielsen}(1992)}]{Nielsen92}
 Nielsen, P. (1992), \textit{Coastal Bottom Boundary Layers and Sediment Transport, Advanced Series on Ocean Engineering}, vol. 4, World Sci., Hackensack, N. J.
+
+\bibitem[{\textit{Nordlund}(1996)}]{Nordlund96}
+Nordlund, U. (1996), Formalizing geological knowledge—with and example of modeling stratigraphy using fuzzy logic, \textit{J. Sediment. Res.}, \textit{66}, 689--712.
+
+\bibitem[{\textit{Nordlund}(1999)}]{Nordlund99}
+Nordlund, U. (1999), FUZZIM: Forward stratigraphic modeling made simple, \textit{Comp. and Geosc.}, \textit{25}, 449--456.
+
+\bibitem[{\textit{Parcell et al.}(1998)}]{Parcell98}
+Parcell, W. C., E. A. Mancini, D. J. Benson, H. Chen, and W. Yang (1998), Geological and computer modeling of 2-D and 3-D carbonate lithofacies trends in the Upper Jurassic Oxfordian, Smackover Formation, Northeastern Gulf Coast, \textit{Abstr. Programs - Geol. Soc. Am. Annu. Meet.}, \textit{30}, A338.
 
 \bibitem[{\textit{Pomeroy et al.}(2012)}]{Pomeroy12}
 Pomeroy A., R. J. Lowe, G. Symonds, A. van Dongeren,  and C. Moore (2012), The dynamics of infragravity wave transformation over a fringing reef, \textit{J. Geophys. Res.}, \textit{117}, C11022.
@@ -562,6 +597,9 @@ Ruessink, B. G., K. T. Houwman, and P. Hoekstra (1998), The systematic contribut
 
 \bibitem[{\textit{Ruessink et al.}(2001)}]{Ruessink01}
 Ruessink, B. G., J. R. Miles, F. Feddersen, R. T. Guza, and S. Elgar (2001), Modeling the alongshore current on barred beaches.  \textit{J. Geophys. Res.}, \textit{106}, 22451--22464.
+
+\bibitem[{\textit{Salles et al.}(2011)}]{Salles11}
+Salles, T., C. Griffiths, C. Dyt, and F. Li (2011), Australian shelf sediment transport responses to climate change-driven ocean perturbations. \textit{Marine Geology}, \textit{282}, (3-4), 268--274.
 
 \bibitem[{\textit{Smith and Cheung}(2004)}]{Smith04}
 Smith, D. A., and K. F. Cheung (2004), Initiation of motion of calcareous sand, \textit{J. Hydraul. Eng., ASCE}, \textit{130}, 467--472.
@@ -595,6 +633,11 @@ Warner, J. C., C. R. Sherwood, R. P. Signell, C. Harris, and H. G. Arango (2008)
 \bibitem[{\textit{Young}(1989)}]{Young89}
 Young, I. R. (1989), Wave transformation over coral reefs, \textit{J. Geophys. Res.}, \textit{94(C7)}, 9779--9789, doi:10.1029/JC094iC07p09779.
 
+\bibitem[{\textit{Zadeh}(1965)}]{Zadeh65}
+Zadeh, L. A. (1965), Fuzzy sets, \textit{Information and Control}, \textit{8}, 338--353.
+
+\bibitem[{\textit{Zimmerman}(1991)}]{Zimmerman91}
+Zimmerman, H. J. (1991), Fuzzy Set Theory and Its Applications: Boston, Kluwer Academic, 399 p.
 
 %\providecommand{\natexlab}[1]{#1}
 %\expandafter\ifx\csname urlstyle\endcsname\relax
