@@ -215,15 +215,21 @@ School of Geosciences, University of Sydney, Madsen Building, Sydney, NSW 2006, 
 
 \section{Carbonate platform evolution models}
 
-\section{pyReef model}
+\section{Model overview}
 
-\subsection{Model overview}
+In this section, a new, deterministic three-dimensional carbonate forward model, pyReef is presented, which simulates reef growth, reef transport and lagoon development based on the coupling between four components: a wave transformation model, a long-term circulation model, a calcareous sand transport model and a carbonate production/disintegration fuzzy logic model.
 
-python parallel docker open-source github multi-habitats
+\noindent \textbf{pyReef} is an open-source and parallel model mainly written in Python and capable of simulating reef system evolution over time scale of hundreds to thousands of years and over 1 to 10's kilometres scale. The model source code, its associated documentation along with the input files for the examples discussed in this paper are available on Github (http://github.com/pyReef-model). The code is designed to be applied within a variety of environments, from fringing and barrier reefs to carbonate ramps and atolls.
 
-\subsection{Large-scale forcings}
+\noindent Below we provide a detailed description of the physical algorithms implemented in pyReef as well as the key assumptions underlying our approach.
 
-temperature, salinity sea-level tectonics ph
+\subsection{Extrinsic forcings}
+
+At basin-scale carbonate deposits are strongly controlled by large-scale forcings. Extrinsic processes will affect both the morphology of reef systems and stratigraphy of carbonate depositional sequences by modifying the carbonates production \citep{Hill06}. In pyReef, the following set of external forcing mechanisms could be considered: sea-level oscillations, subsidence/uplift rates, and regional oceanic conditions (\textit{i.e.} sea temperature and acidity).
+
+\noindent Accomodation space is a function of relative sea-level changes, which is the sum effect of eustatic sea-level changes, tectonic changes and sediment supply. Several studies have shown that the rates of accretion of coral reefs are largely constrained by changes in accomodation space (\citet{VanWoesik15} or \citet{Roff15} to cite a few). In our model, a sea-level curve can be imported from either a known eustatic curve (\textit{e.g.} such as the ones from \citet{Haq87} or \citet{Miller05}) or directly defined by the user. The tectonic changes are provided as a series of temporal maps. Each map can have variable spatial cumulative displacements making it possible to simulate complex tectonic evolution with both uplift and subsidence conditions. These two forcing mechanisms will directly control the evolution of the hydrodynamic conditions and the associated sediment transport regime as well as the carbonate production described in the following subsections.
+
+\noindent Changing sea surface temperatures and ocean acidification are known to have significant effects across reef systems by controlling the rate of coral reef growth \citep{Shaw12, Andersson13, Zhang13}. In pyReef, long-term regional scale evolution of either ocean's temperature or pH are set by the user as temporal-dependent functions. These functions are then used to control the carbonate production and disintegration as explained in subsection \ref{fuzzy}.
 
 \subsection{Wave transformation}
 
@@ -328,7 +334,7 @@ In addition, to the above sediment transport model a multi-lithology non-linear 
 
 To simulate bed morphology and stratigraphic evolution a classical multi-level bed framework tracks the distribution of every coral assemblage through time by layers (\citet{Warner08} and reference therein). In pyReef, each layer stores the bulk properties including thickness and percentage of hard and loose coral assemblages. An active layer at the top of the stratigraphic pile is used to calculate the transport of the calcareous sand from both the wave-current driven and diffusion-based models presented above.
 
-\subsection{Carbonate growth and disintegration}
+\subsection{Carbonate growth and disintegration}\label{fuzzy}
 
 The organisation of coral reef systems is known to be large and complex and we are still limited in our understanding of their temporal and spatial evolution \citep{Demicco98}. Additionally, most datasets of carbonate systems are often linguistic, context-dependent, and based on measurements with large uncertainties. Conventional deterministic techniques are often enable to address many of the significant variables which affect carbonate productivity \citep{Parcell98}.
 
@@ -425,6 +431,9 @@ impact of change in pH and ocean temperature
 
 \begin{thebibliography}{}
 
+\bibitem[{\textit{Andersson and Gledhill}(2013)}]{Andersson13}
+Andersson, A. J., and D. Gledhill (2013), Ocean acidification and coral reefs: effects on breakdown, dissolution, and net ecosystem calcification, \textit{Annu. Rev. Mar. Sci.}, \textit{5}, 321--48.
+
 \bibitem[{\textit{Apotsos et al.}(2007)}]{Apotsos07}
 Apotsos, A., B. Raubenheimer, S. Elgar, R. T. Guza, and J. A. Smith (2007), Effects of wave rollers and bottom stress on wave setup, \textit{J. Geophys. Res.}, \textit{112}, C02003, doi:10.1029/2006JC003549.
 
@@ -493,11 +502,17 @@ Grasmeijer, B. T., and B. G.Ruessink (2003), Modeling of waves and currents in t
 
 \bibitem[{\textit{Hamner and Wolanski}(1988)}]{Hamner88}
 Hamner, W., and E. Wolanski (1988), Hydrodynamic forcing functions and biological processes on coral reefs: a status review, \textit{In Proceedings of the 6th International Coral Reef Symposium, Vol. 1: Plenary Addresses and Status Review, ed. JH Choat, D Barnes, MA Borowitzka, JC Coll, PJ Davies, et al.}, pp. 103--13. Townsville, Aust.: Int. Coral Reef Symp. Exec. Comm.
+\bibitem[{\textit{Haq et al.}(1987)}]{Haq87}
+Haq, B. U., J. Hardenbol, and P. R. Vail (1987), Chronology of fluctuating sea levels since the Triassic (250 million years ago to present), \textit{Science}, \textit{235}, 1156--1167.
+
 \bibitem[{\textit{Hasselmann et al.}(1973)}]{Hasselmann73}
 Hasselmann, K., et al. (1973), Measurements of wind-wave growth and swell decay during the Joint North Sea Wave Project (JONSWAP), \textit{Dtsch. HydrogrZ. 2}, Suppl., 1 (A8), 1--95.
 
 \bibitem[{\textit{Hattab et al.}(2013)}]{Hattab13}
 Hattab, T., F. Ben Rais Lasram, C. Albouy, C. Sammari, M. S. Romdhane, P. Cury, F. Leprieur, and F. Le Loc'h (2013), The Use of a Predictive Habitat Model and a Fuzzy Logic Approach for Marine Management and Planning, \textit{PLoS ONE}, \textit{8}, (10), e76430. doi:10.1371/journal.pone.0076430
+
+\bibitem[{\textit{Hill}(2006)}]{Hill06}
+Hill, J. (2006), Modelling of reefs and shallow marine carbonates, \textit{Ph.D. Thesis, University of Edinburgh}, 174 p.
 
 \bibitem[{\textit{Holthuijsen et~al.}(1993)}]{Holthuijsen93}
 Holthuijsen L.~H, N. Booij, and R.~C. Ris (1993), A spectral wave model for the coastal zone, \textit{Proceedings of the 2nd international symposium on ocean wave measurement and analysis}, \textit{New Orleans, LA}, pp. 630--641.
@@ -553,6 +568,9 @@ Madsen, O. S., Y. Poon, and H. C. Graber (1988), Spectral wave attenuation by bo
 \bibitem[{\textit{Meesters et al.}(1998)}]{Meesters98}
 Meesters, E. H., R. P. M. Bak, S. Westmacott, M. Ridgley, and S. Dollar (1998), A fuzzy logic model to predict coral reef development under nutrient stress, \textit{Conserv. Biol.}, \textit{12}, 957--965.
 
+\bibitem[{\textit{Miller et al.}(2005)}]{Miller05}
+Miller, K. G., M. A. Kominz, J. V. Browning, J. D. Wright, G. S. Mountain, M. E. Katz, P. J. Sugarman, B. S. Cramer, N. Christie-Blick, and S. F. Pekar (2005), The phanerozoic record of global sea-level change, \textit{Science}, \textit{310}, 1293--1298.
+
 \bibitem[{\textit{Monismith}(2007)}]{Monismith07}
 Monismith, S. G. (2007), Hydrodynamics of coral reefs, \textit{Annu. Rev. Fluid Mech.}, \textit{39}, 37--55.
 
@@ -589,6 +607,9 @@ Reniers, A. J. H. M., and J. A. Battjes, (1997), A laboratory study of long shor
 \bibitem[{\textit{Rivenaes}(1997)}]{Rivenaes97}
 Rivenaes, J. C. (1997), Application of a dual-lithology, depth-dependent diffusion equation in stratigraphic simulation, \textit{Basin Research}, \textit{4}, 2, 133--146.
 
+\bibitem[{\textit{Roff el al.}(2015)}]{Roff15}
+Roff, G., J.-X. Zhao, and J. Pandolfi (2015), Rapid accretion of inshore reef slopes from the central Great Barrier Reef during the late Holocene, \textit{Geology}, doi:10.1130/G36478.1.
+
 \bibitem[{\textit{Rogers el al.}(2015)}]{Rogers15}
 Rogers, J. S., S. G. Monismith, D. A. Koweek, and R. B. Dunbar (2015), Wave dynamics of a Pacific Atoll with high frictional effects, \textit{J. Geophys. Res. Oceans}, \textit{120}, doi:10.1002/ 2015JC011170.
 
@@ -600,6 +621,9 @@ Ruessink, B. G., J. R. Miles, F. Feddersen, R. T. Guza, and S. Elgar (2001), Mod
 
 \bibitem[{\textit{Salles et al.}(2011)}]{Salles11}
 Salles, T., C. Griffiths, C. Dyt, and F. Li (2011), Australian shelf sediment transport responses to climate change-driven ocean perturbations. \textit{Marine Geology}, \textit{282}, (3-4), 268--274.
+
+\bibitem[{\textit{Shaw et al.}(2012)}]{Shaw12}
+Shaw, E. C., B. I. McNeil, and B. Tilbrook (2012), Impacts of ocean acidification in naturally variable coral reef flat ecosystems, \textit{J. Geophys. Res.}, \textit{117}, C03038.
 
 \bibitem[{\textit{Smith and Cheung}(2004)}]{Smith04}
 Smith, D. A., and K. F. Cheung (2004), Initiation of motion of calcareous sand, \textit{J. Hydraul. Eng., ASCE}, \textit{130}, 467--472.
@@ -624,6 +648,9 @@ Swart, D. H. (1974), Offshore sediment transport and equilibrium beach profiles,
 \bibitem[{\textit{Taebi et al.}(2011)}]{Taebi11}
 Taebi, S., R. J. Lowe, C. B. Pattiaratchi, G. N. Ivey,  G. Symonds, and R. Brinkman (2011), Nearshore circulation in atropical fringing reef system, \textit{J. Geophys. Res.}, \textit{116}, C02016.
 
+\bibitem[{\textit{Van Woesik et al.}(2015)}]{VanWoesik15}
+Van Woesik, R., Y. Golbuu, and G. Roff (2015), Keep up or drown: adjustment of western Pacific coral reefs to sea-level rise in the 21st century, \textit{Royal Society Open Science}, \textit{2}, (7), doi:10.1098/rsos.150181.
+
 \bibitem[{\textit{Vetter et al.}(2010)}]{Vetter10}
 Vetter, O., J. M. Becker, M. A. Merrifield, A.-C. P\'equignet, J. Aucan, S. J. Boc, and C. E. Pollock (2010), Wave setup over a Pacific Island fringing reef, \textit{J. Geophys. Res.}, \textit{115}, C12066, doi:10.1029/2010JC006455.
 
@@ -635,6 +662,9 @@ Young, I. R. (1989), Wave transformation over coral reefs, \textit{J. Geophys. R
 
 \bibitem[{\textit{Zadeh}(1965)}]{Zadeh65}
 Zadeh, L. A. (1965), Fuzzy sets, \textit{Information and Control}, \textit{8}, 338--353.
+
+\bibitem[{\textit{Zhang et al.}(2013)}]{Zhang13}
+Zhang, Z., J. L. Falter, R. L. Lowe, G. Ivey, M. McCulloch (2013), Atmospheric forcing intensifies the effects of regional ocean warming on reef-scale temperature anomalies during a coral bleaching event, \textit{J. Geophys. Res.}, \textit{118}, 4600–16.
 
 \bibitem[{\textit{Zimmerman}(1991)}]{Zimmerman91}
 Zimmerman, H. J. (1991), Fuzzy Set Theory and Its Applications: Boston, Kluwer Academic, 399 p.
