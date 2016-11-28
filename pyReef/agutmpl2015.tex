@@ -92,6 +92,8 @@
 % See how to enter figures and tables at the end of the article, after
 % references.
 %
+\usepackage{graphicx}
+\usepackage{amssymb}
 %% ------------------------------------------------------------------------ %%
 %
 %  ENTER PREAMBLE
@@ -215,9 +217,11 @@ School of Geosciences, University of Sydney, Madsen Building, Sydney, NSW 2006, 
 
 \section{Carbonate platform evolution models}
 
+Talk about stratigraphic forward modelling
+
 \section{Model overview}
 
-In this section, a new, deterministic three-dimensional carbonate forward model, pyReef is presented, which simulates reef growth, reef transport and lagoon development based on the coupling between four components: a wave transformation model, a long-term circulation model, a calcareous sand transport model and a carbonate production/disintegration fuzzy logic model.
+In this section, a new, deterministic three-dimensional carbonate forward model, pyReef is presented, which simulates reef growth, reef transport and lagoon development based on the coupling between four components: a wave transformation model, a long-term circulation model, a calcareous sand transport model and a carbonate production/disintegration fuzzy logic model (Fig.~\ref{pyreef_sketch}).
 
 \noindent \textbf{pyReef} is an open-source and parallel model mainly written in Python and capable of simulating reef system evolution over time scale of hundreds to thousands of years and over 1 to 10's kilometres scale. The model source code, its associated documentation along with the input files for the examples discussed in this paper are available on Github (http://github.com/pyReef-model). The code is designed to be applied within a variety of environments, from fringing and barrier reefs to carbonate ramps and atolls.
 
@@ -230,6 +234,14 @@ At basin-scale carbonate deposits are strongly controlled by large-scale forcing
 \noindent Accomodation space is a function of relative sea-level changes, which is the sum effect of eustatic sea-level changes, tectonic changes and sediment supply. Several studies have shown that the rates of accretion of coral reefs are largely constrained by changes in accomodation space (\citet{VanWoesik15} or \citet{Roff15} to cite a few). In our model, a sea-level curve can be imported from either a known eustatic curve (\textit{e.g.} such as the ones from \citet{Haq87} or \citet{Miller05}) or directly defined by the user. The tectonic changes are provided as a series of temporal maps. Each map can have variable spatial cumulative displacements making it possible to simulate complex tectonic evolution with both uplift and subsidence conditions. These two forcing mechanisms will directly control the evolution of the hydrodynamic conditions and the associated sediment transport regime as well as the carbonate production described in the following subsections.
 
 \noindent Changing sea surface temperatures and ocean acidification are known to have significant effects across reef systems by controlling the rate of coral reef growth \citep{Shaw12, Andersson13, Zhang13}. In pyReef, long-term regional scale evolution of either ocean's temperature or pH are set by the user as temporal-dependent functions. These functions are then used to control the carbonate production and disintegration as explained in subsection \ref{fuzzy}.
+
+\begin{figure}
+\centering
+\noindent\includegraphics[width=20pc]{figs/fig1.pdf}
+\caption{A schematic of 2D coral reef evolution model illustrating the main variables and forces simulated with \textit{pyReef}, where $w$ is wave forcing conditions, $c$ is the long-term ocean circulation, $sl$ is the sea-level, $t$ is the tectonic and $ph$ and $T$ are the ocean's acidity and temperature respectively.
+}
+\label{pyreef_sketch}
+\end{figure}
 
 \subsection{Wave transformation}
 
