@@ -106,6 +106,9 @@ INPUT ./figs/fig1.pdf
 OUTPUT agutmpl2015.pdf
 INPUT ./figs/fig1.pdf
 INPUT /usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT figs/fig2.pdf
+INPUT ./figs/fig2.pdf
+INPUT ./figs/fig2.pdf
 INPUT figs/fig3.pdf
 INPUT ./figs/fig3.pdf
 INPUT ./figs/fig3.pdf

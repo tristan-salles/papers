@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.16)  29 NOV 2016 07:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.16)  29 NOV 2016 19:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -228,11 +228,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 LaTeX Warning: Unused global option(s):
     [default].
 
-(./agutmpl2015.aux
-
-LaTeX Warning: Label `fuzzy' multiply defined.
-
-)
+(./agutmpl2015.aux)
 \openout1 = `agutmpl2015.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 119.
@@ -247,7 +243,8 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
 LaTeX Font Info:    ... okay on input line 119.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
 LaTeX Font Info:    ... okay on input line 119.
- (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+
+(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count132
 \scratchdimen=\dimen153
@@ -329,28 +326,41 @@ Package pdftex.def Info: figs/fig1.pdf used on input line 236.
  [1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
  <./figs/fig1.pdf>]
+\dblfigandtabbox1=\box59
+ <figs/fig2.pdf, id=35, 1012.01459pt x 738.62651pt>
+File: figs/fig2.pdf Graphic file (type pdf)
+ <use figs/fig2.pdf>
+Package pdftex.def Info: figs/fig2.pdf used on input line 281.
+(pdftex.def)             Requested size: 456.0pt x 332.8184pt.
+
 Overfull \vbox (1.0pt too high) has occurred while \output is active []
 
  [2]
-Overfull \vbox (1.00002pt too high) has occurred while \output is active []
-
-
-[3]
-\dblfigandtabbox1=\box59
- <figs/fig3.pdf, id=48, 1016.39655pt x 733.13658pt>
+[3 <./figs/fig2.pdf>]
+\dblfigandtabbox2=\box60
+ <figs/fig3.pdf, id=103, 1016.39655pt x 733.13658pt>
 File: figs/fig3.pdf Graphic file (type pdf)
- <use figs/fig3.pdf>
-Package pdftex.def Info: figs/fig3.pdf used on input line 351.
+
+<use figs/fig3.pdf>
+Package pdftex.def Info: figs/fig3.pdf used on input line 360.
 (pdftex.def)             Requested size: 444.0pt x 320.26544pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 365--369
+Underfull \hbox (badness 10000) in paragraph at lines 374--378
 
  []
 
+
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+ [4]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
-[4] [5 <./figs/fig3.pdf>]
+
+Overfull \vbox (1.00002pt too high) has occurred while \output is active []
+
+
+[5 <./figs/fig3.pdf>] [6]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no ” in font cmr8!
@@ -358,54 +368,49 @@ Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
 
-Underfull \hbox (badness 10000) in paragraph at lines 688--689
+Underfull \hbox (badness 10000) in paragraph at lines 697--698
 []\OT1/cmr/m/n/8 Young, I. R. (1989), Wave trans-for-ma-tion over
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 688--689
+Underfull \hbox (badness 10000) in paragraph at lines 697--698
 \OT1/cmr/m/n/8 coral reefs, \OT1/cmr/m/it/8 J. Geo-phys. Res.\OT1/cmr/m/n/8 , \
 OT1/cmr/m/it/8 94(C7)\OT1/cmr/m/n/8 , 9779--9789,
  []
 
-[6]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
- [7] (./agutmpl2015.aux)
-
-LaTeX Warning: There were multiply-defined labels.
-
- ) 
+[7] (./agutmpl2015.aux) ) 
 Here is how much of TeX's memory you used:
- 2788 strings out of 493089
- 36379 string characters out of 6134841
- 127415 words of memory out of 5000000
- 6256 multiletter control sequences out of 15000+600000
+ 2803 strings out of 493089
+ 36599 string characters out of 6134841
+ 137950 words of memory out of 5000000
+ 6270 multiletter control sequences out of 15000+600000
  16511 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,26p,1400b,586s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
-sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/
-local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local
-/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/te
-xlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texli
-ve/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
-2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2
-015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/201
-5/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on agutmpl2015.pdf (7 pages, 419474 bytes).
+ 37i,10n,26p,1476b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
+onts/cmextra/cmex9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
+8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
+fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
+b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on agutmpl2015.pdf (7 pages, 16368831 bytes).
 PDF statistics:
- 514 PDF objects out of 1000 (max. 8388607)
- 348 compressed objects within 4 object streams
+ 571 PDF objects out of 1000 (max. 8388607)
+ 381 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
