@@ -1,8 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1480408441 "agutmpl2015.tex" "agutmpl2015.pdf" "agutmpl2015" 1480408441
+["pdflatex"] 1480452347 "agutmpl2015.tex" "agutmpl2015.pdf" "agutmpl2015" 1480452347
   "./figs/fig1.pdf" 1480305964 61890 88a3d9fb86dbe3ad42d525331cb63eaa ""
-  "./figs/fig2.pdf" 1480408202 15953985 fb862556738a6502140a83d850bd3b04 ""
-  "./figs/fig3.pdf" 1480363976 135749 de1b85d9e77e0f75018ccc9551354c1c ""
+  "./figs/fig2.pdf" 1480413716 15956233 29196aeb00c04d9fe88e9e1cb717ca88 ""
+  "./figs/fig3.pdf" 1480413799 135749 de1b85d9e77e0f75018ccc9551354c1c ""
   "/usr/local/texlive/2015/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2015/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -77,12 +77,12 @@
   "/usr/local/texlive/2015/texmf-var/web2c/pdftex/pdflatex.fmt" 1444952227 3849860 0a1f4ee580c174d102350eeb4c6a2598 ""
   "/usr/local/texlive/2015/texmf.cnf" 1432479636 577 0d611272082f3cdb8e80e09a3c69cf07 ""
   "agutex2015.cls" 1479658754 222182 2a897aff2f17c131dcaa41f98e0e854a ""
-  "agutmpl2015.aux" 1480408441 8088 0d197e52f750f5f6a7bb6f26a7ca3fe7 ""
-  "agutmpl2015.tex" 1480408440 62347 4b756be830911bb3ae1da04d952a946e ""
+  "agutmpl2015.aux" 1480452347 8159 ed50ebf1de3d44374713b44f4e707961 ""
+  "agutmpl2015.tex" 1480452346 62971 dfaafa62770b1f001bb7c5babfc42951 ""
   "figs/fig1.pdf" 1480305964 61890 88a3d9fb86dbe3ad42d525331cb63eaa ""
-  "figs/fig2.pdf" 1480408202 15953985 fb862556738a6502140a83d850bd3b04 ""
-  "figs/fig3.pdf" 1480363976 135749 de1b85d9e77e0f75018ccc9551354c1c ""
+  "figs/fig2.pdf" 1480413716 15956233 29196aeb00c04d9fe88e9e1cb717ca88 ""
+  "figs/fig3.pdf" 1480413799 135749 de1b85d9e77e0f75018ccc9551354c1c ""
   (generated)
-  "agutmpl2015.pdf"
   "agutmpl2015.log"
+  "agutmpl2015.pdf"
   "agutmpl2015.aux"

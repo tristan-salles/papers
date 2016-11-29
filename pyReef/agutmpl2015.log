@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.16)  29 NOV 2016 19:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.16)  30 NOV 2016 07:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -327,39 +327,31 @@ Package pdftex.def Info: figs/fig1.pdf used on input line 236.
 
  <./figs/fig1.pdf>]
 \dblfigandtabbox1=\box59
- <figs/fig2.pdf, id=35, 1012.01459pt x 738.62651pt>
+ <figs/fig2.pdf, id=35, 990.66217pt x 770.50653pt>
 File: figs/fig2.pdf Graphic file (type pdf)
  <use figs/fig2.pdf>
 Package pdftex.def Info: figs/fig2.pdf used on input line 281.
-(pdftex.def)             Requested size: 456.0pt x 332.8184pt.
+(pdftex.def)             Requested size: 456.0pt x 354.66068pt.
 
 Overfull \vbox (1.0pt too high) has occurred while \output is active []
 
  [2]
 [3 <./figs/fig2.pdf>]
 \dblfigandtabbox2=\box60
- <figs/fig3.pdf, id=103, 1016.39655pt x 733.13658pt>
+ <figs/fig3.pdf, id=104, 1016.39655pt x 733.13658pt>
 File: figs/fig3.pdf Graphic file (type pdf)
 
 <use figs/fig3.pdf>
-Package pdftex.def Info: figs/fig3.pdf used on input line 360.
+Package pdftex.def Info: figs/fig3.pdf used on input line 359.
 (pdftex.def)             Requested size: 444.0pt x 320.26544pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 374--378
+ [4]
+Underfull \hbox (badness 10000) in paragraph at lines 373--377
 
  []
 
-
-Overfull \vbox (1.0pt too high) has occurred while \output is active []
-
- [4]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
-
-Overfull \vbox (1.00002pt too high) has occurred while \output is active []
-
-
 [5 <./figs/fig3.pdf>] [6]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
@@ -368,12 +360,12 @@ Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
 
-Underfull \hbox (badness 10000) in paragraph at lines 697--698
+Underfull \hbox (badness 10000) in paragraph at lines 696--697
 []\OT1/cmr/m/n/8 Young, I. R. (1989), Wave trans-for-ma-tion over
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 697--698
+Underfull \hbox (badness 10000) in paragraph at lines 696--697
 \OT1/cmr/m/n/8 coral reefs, \OT1/cmr/m/it/8 J. Geo-phys. Res.\OT1/cmr/m/n/8 , \
 OT1/cmr/m/it/8 94(C7)\OT1/cmr/m/n/8 , 9779--9789,
  []
@@ -383,13 +375,13 @@ Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
 [7] (./agutmpl2015.aux) ) 
 Here is how much of TeX's memory you used:
- 2803 strings out of 493089
- 36599 string characters out of 6134841
- 137950 words of memory out of 5000000
- 6270 multiletter control sequences out of 15000+600000
+ 2804 strings out of 493089
+ 36608 string characters out of 6134841
+ 141727 words of memory out of 5000000
+ 6271 multiletter control sequences out of 15000+600000
  16511 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,26p,1476b,519s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,27p,1956b,513s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
@@ -407,10 +399,10 @@ b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on agutmpl2015.pdf (7 pages, 16368831 bytes).
+Output written on agutmpl2015.pdf (7 pages, 16372094 bytes).
 PDF statistics:
- 571 PDF objects out of 1000 (max. 8388607)
- 381 compressed objects within 4 object streams
+ 572 PDF objects out of 1000 (max. 8388607)
+ 382 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
