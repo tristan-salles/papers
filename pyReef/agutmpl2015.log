@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.16)  30 NOV 2016 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.16)  30 NOV 2016 16:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -321,39 +321,39 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ]
 \figandtabbox1=\box58
 
-<figs/fig1.pdf, id=14, 895.15771pt x 382.74983pt>
+<figs/fig1.pdf, id=13, 895.15771pt x 382.74983pt>
 File: figs/fig1.pdf Graphic file (type pdf)
  <use figs/fig1.pdf>
 Package pdftex.def Info: figs/fig1.pdf used on input line 247.
 (pdftex.def)             Requested size: 240.0pt x 102.61963pt.
 \dblfigandtabbox1=\box59
 
-<figs/fig2.pdf, id=15, 990.66217pt x 770.50653pt>
+<figs/fig2.pdf, id=14, 990.66217pt x 770.50653pt>
 File: figs/fig2.pdf Graphic file (type pdf)
  <use figs/fig2.pdf>
 Package pdftex.def Info: figs/fig2.pdf used on input line 286.
 (pdftex.def)             Requested size: 456.0pt x 354.66068pt.
  [2 <./figs/fig1.pdf>] [3 <./figs/fig2.pdf>]
-Overfull \vbox (1.0pt too high) has occurred while \output is active []
-
- [4]
 \dblfigandtabbox2=\box60
 
-<figs/fig3.pdf, id=107, 1016.39655pt x 733.13658pt>
+<figs/fig3.pdf, id=104, 1016.39655pt x 733.13658pt>
 File: figs/fig3.pdf Graphic file (type pdf)
  <use figs/fig3.pdf>
-Package pdftex.def Info: figs/fig3.pdf used on input line 364.
+Package pdftex.def Info: figs/fig3.pdf used on input line 325.
 (pdftex.def)             Requested size: 444.0pt x 320.26544pt.
 
+[4]
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
+
+ [5 <./figs/fig3.pdf>]
 Underfull \hbox (badness 10000) in paragraph at lines 378--382
 
  []
 
-[5]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
- [6 <./figs/fig3.pdf>] [7]
+[6] [7]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no ” in font cmr8!
@@ -378,11 +378,11 @@ Missing character: There is no “ in font cmr8!
 Here is how much of TeX's memory you used:
  2820 strings out of 493089
  36781 string characters out of 6134841
- 136485 words of memory out of 5000000
+ 142278 words of memory out of 5000000
  6287 multiletter control sequences out of 15000+600000
  16511 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,27p,1956b,549s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,10n,27p,1956b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public
 /amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
@@ -400,7 +400,7 @@ b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
 </usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></
 usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></us
 r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on agutmpl2015.pdf (8 pages, 16381322 bytes).
+Output written on agutmpl2015.pdf (8 pages, 16382066 bytes).
 PDF statistics:
  575 PDF objects out of 1000 (max. 8388607)
  384 compressed objects within 4 object streams
