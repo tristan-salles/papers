@@ -213,13 +213,18 @@ School of Geosciences, University of Sydney, Madsen Building, Sydney, NSW 2006, 
 %% ------------------------------------------------------------------------ %%
 
 \section{Introduction}
-(Article text here.)
 
-\section{Carbonate platform evolution models}
+Over more than two decades, forward modelling of carbonate platform evolution have been successfully able to replicate many aspects of reef stratigraphic architectures \citep{Bosence90, Parcell03, Hasler08, Barrett12, Seard13, Huang15, Kolodka16}. These studies are used to understand and make predictions of subsurface stratal geometries and facies but also to quantify the influences of both allocyclic and autocyclic processes on carbonate systems (\citet{Williams11} or \citet{Burgess13} to cite the most recent ones). Due to the broad range of spatial and temporal scales as well as the complex physical and biological feedbacks involved in the formation of coral reefs, stratigraphic carbonate numerical models have understandably relied on several assumptions in regards to carbonate production, oceanic forcing and coral communities interactions. Their mathematical representation of stratal construction and sedimentary processes can be divided in three main families.
 
-Talk about stratigraphic forward modelling
+\noindent The convential approach simulates 3D development of either pure carbonate or mixed carbonate-silicilastic stratigraphies by modelling the main sedimentary processes using deterministic algorithms with time step of several hundreds to thousands of years. In this type of approach, the mathematical strategies often rely on diffusion laws, carbonate in-situ and sediment production rates associated to different carbonate factories as defined by \citet{James92} and use a mix of physical and empirical-based modelling methods. Complexity of the mathematical techniques used in these models usually depends on the problem to address \citep{Granjeon99, Warrlich02, Toomey16}. The most used models in this space are \textit{Dionisos} \citep{Granjeon99} and \textit{Carbonate3D} \citep{Warrlich02}. Two notable other examples are \textit{Simsafadim} \citep{Bitzer01} which incorporates \textit{predator-prey} algorithm to simulate the effect of biological activity and \textit{GPM} \citep{Tetzlaff05, Hill06} which address the problem of supersaturation on carbonate platform depositional geometries.
 
-\section{Model overview}
+\noindent The second family of mathematical models proposes to mitigate the lack of observational data and highly nonlinear relationships between the different components of a reef system by using a fuzzy logic approach \citep{Meesters98}. Fuzzy-based numerical models have proven to be a good alternative to conventional approach which often suffers from a lack of quantitative knowledge about the system being modeled, and therefore limits the effective use of available dataset \citep{Parcell98}. In addition to purely fuzzy-based stratigraphic forward modelling approaches (\textit{e.g.} \textit{FuzzyReef} from \citet{Parcell03} or \textit{Fuzzim} from \citet{Nordlund99}), other models have combined conventional hydrodynamics flow model and associated sediment transport with fuzzy logic and fuzzy-set theory to predict facies distribution in carbonate environments (an example being \textit{Sedsim} \citep{Griffiths01, Salles11}).
+
+\noindent The last family cellular automata
+
+\noindent To our knowledge, the models discussed above are all lacking the details of the wave hydrodynamic conditions and associated ocean circulation which are known to control not only the sediment transport in reef-lagoonal systems but also the dispersal of reef larvae and, therefore, the biogeographical distribution of reef organisms \citep{Lowe15}. In this paper, we design a numerical model that address this issue and enable to ... (I will wait to get some results before going further)
+
+\section{Physical description}
 
 In this section, a new, deterministic three-dimensional carbonate forward model, pyReef is presented, which simulates reef growth, reef transport and lagoon development based on the coupling between four components: a wave transformation model, a long-term circulation model, a calcareous sand transport model and a carbonate production/disintegration fuzzy logic model (Fig.~\ref{pyreef_sketch}).
 
@@ -231,19 +236,19 @@ In this section, a new, deterministic three-dimensional carbonate forward model,
 
 At basin-scale carbonate deposits are strongly controlled by large-scale forcings. Extrinsic processes will affect both the morphology of reef systems and stratigraphy of carbonate depositional sequences by modifying the carbonates production \citep{Hill06}. In pyReef, the following set of external forcing mechanisms could be considered: sea-level oscillations, subsidence/uplift rates, and regional oceanic conditions (\textit{i.e.} sea temperature and acidity).
 
-\begin{figure}
+\noindent Accomodation space is a function of relative sea-level changes, which is the sum effect of eustatic sea-level changes, tectonic changes and sediment supply. Several studies have shown that the rates of accretion of coral reefs are largely constrained by changes in accomodation space (\citet{VanWoesik15} or \citet{Roff15} to cite a few). In our model, a sea-level curve can be imported from either a known eustatic curve (\textit{e.g.} such as the ones from \citet{Haq87} or \citet{Miller05}) or directly defined by the user. The tectonic changes are provided as a series of temporal maps. Each map can have variable spatial cumulative displacements making it possible to simulate complex tectonic evolution with both uplift and subsidence conditions. These two forcing mechanisms will directly control the evolution of the hydrodynamic conditions and the associated sediment transport regime as well as the carbonate production described in the following subsections and illustrated in figure \ref{pyreef_sketch}.
+
+\noindent Changing sea surface temperatures and ocean acidification are known to have significant effects across reef systems by controlling the rate of coral reef growth \citep{Shaw12, Andersson13, Zhang13}. In pyReef, long-term regional scale evolution of either ocean's temperature or pH are set by the user as temporal-dependent functions. These functions are then used to control the carbonate production and disintegration as explained in subsection \ref{fuzzy} (Fig.~\ref{pyreef_sketch}).
+
+\subsection{Wave transformation}
+
+\begin{figure}[t]
 \centering
 \noindent\includegraphics[width=20pc]{figs/fig1.pdf}
 \caption{A schematic of 2D coral reef evolution model illustrating the main variables and forces simulated with \textit{pyReef}, where \textbf{w} is wave forcing conditions, \textbf{c} is the long-term ocean circulation, \textbf{sl} is the sea-level, \textbf{t} is the tectonic and \textbf{ph} and \textbf{T} are the ocean's acidity and temperature respectively. The stratigraphic evolution and bed morphology are computes through time and are made of multiple coral assemblages.
 }
 \label{pyreef_sketch}
 \end{figure}
-
-\noindent Accomodation space is a function of relative sea-level changes, which is the sum effect of eustatic sea-level changes, tectonic changes and sediment supply. Several studies have shown that the rates of accretion of coral reefs are largely constrained by changes in accomodation space (\citet{VanWoesik15} or \citet{Roff15} to cite a few). In our model, a sea-level curve can be imported from either a known eustatic curve (\textit{e.g.} such as the ones from \citet{Haq87} or \citet{Miller05}) or directly defined by the user. The tectonic changes are provided as a series of temporal maps. Each map can have variable spatial cumulative displacements making it possible to simulate complex tectonic evolution with both uplift and subsidence conditions. These two forcing mechanisms will directly control the evolution of the hydrodynamic conditions and the associated sediment transport regime as well as the carbonate production described in the following subsections.
-
-\noindent Changing sea surface temperatures and ocean acidification are known to have significant effects across reef systems by controlling the rate of coral reef growth \citep{Shaw12, Andersson13, Zhang13}. In pyReef, long-term regional scale evolution of either ocean's temperature or pH are set by the user as temporal-dependent functions. These functions are then used to control the carbonate production and disintegration as explained in subsection \ref{fuzzy}.
-
-\subsection{Wave transformation}
 
 SWAN, short for \textit{Simulating WAves Nearshore}, is a third-generation, finite-difference, wave model used to predict wave propagation in coastal areas and estuaries. It is governed by the wave action balance equation \citep{Bretherton68, Hasselmann73, Holthuijsen93, Booij99}:
 
@@ -465,17 +470,29 @@ Andersson, A. J., and D. Gledhill (2013), Ocean acidification and coral reefs: e
 \bibitem[{\textit{Apotsos et al.}(2007)}]{Apotsos07}
 Apotsos, A., B. Raubenheimer, S. Elgar, R. T. Guza, and J. A. Smith (2007), Effects of wave rollers and bottom stress on wave setup, \textit{J. Geophys. Res.}, \textit{112}, C02003, doi:10.1029/2006JC003549.
 
+\bibitem[{\textit{Barrett and Webster}(2012)}]{Barrett12}
+Barrett, S. J., and J. M. Webster (2012), Holocene evolution of the Great Barrier Reef: Insights from 3D numerical modelling, \textit{Sedimentary Geology}, 265--266, 56--71.
+
 \bibitem[{\textit{Becker et al.}(2014)}]{Becker14}
 Becker, J. M., M. A. Merrifield, and M. Ford (2014), Water level effects on breaking wave setup for Pacific Island fringing reefs, \textit{J. Geophys. Res. Oceans}, \textit{119}, 914--932, doi:10.1002/2013JC009373.
 
 \bibitem[{\textit{Berkan and Trubatch}(1997)}]{Berkan97}
 Berkan, R. C., and S. L. Trubatch (1997), Fuzzy Systems Design Principles: Building Fuzzy IF–THEN Rule Bases: Piscataway, N.J., IEEE Press, 496 p.
 
+\bibitem[{\textit{Bitzer and Salas}(2001)}]{Bitzer01}
+Bitzer, K., and R. Salas (2001), Simulating Carbonate and Mixed Carbonate-Clastic Sedimentation Using Predator-Prey Models, in: D. Merriam \& J. C. Davis eds., Luxer Academic/Plenum Publishers, p. 169--204.
+
 \bibitem[{\textit{Booij et~al.}(1999)}]{Booij99}
 Booij N., R. Ris, and L. Holthuijsen (1999), A third-generation wave model for coastal regions. 1. Model description and validation, \textit{J. Geophys. Res.}, \textit{104},(C4), 7649--7666.
 
+\bibitem[{\textit{Bosence and Waltham}(1990)}]{Bosence90}
+Bosence, D. W. J., and D. A. Waltham (1990), Computer modeling the internal architecture of carbonate platforms, \textit{Geology}, \textit{18}, 26--30.
+
 \bibitem[{\textit{Bretherton and Garrett}(1968)}]{Bretherton68}
 Bretherton, F., and C. Garrett (1968), Wavetrains in inhomogeneous moving media, \textit{Proc. R. Soc. Lond. Ser. A}, \textit{302}, 529--554; doi:10.1098/rspa.1968.0034.
+
+\bibitem[{\textit{Burgess}(2013)}]{Burgess13}
+Burgess, P. M. (2013), CarboCAT: A cellular automata model of heterogeneous carbonate strata, \textit{Comp. Geo.}, \textit{53}, 129--140.
 
 \bibitem[{\textit{Chang et~al.}(2009)}]{Chang09}
 Chang, S., C. Elkins, M. Alley, J. Eaton, and S. G. Monismith (2009), Flow inside a coral colony measured using magneticresonance velocimetry, \textit{Limnol. Oceanogr.}, \textit{54}, 1819.
@@ -522,16 +539,25 @@ Franklin, G., I. Marin~o-Tapia, and A. Torres-Freyermuth (2013), Effects of reef
 \bibitem[{\textit{Galvin}(1987)}]{Galvin87}
 Galvin, C. (1987), The continuity equation for long shore current velocity with breaker angle adjusted for a wave-current interaction, \textit{Coast. Eng.}, \textit{11(2)}, 115--129.
 
+\bibitem[{\textit{Granjeon and Joseph}(1999)}]{Granjeon99}
+Granjeon, D., and P. Joseph (1999), Concepts and applications of a 3D multiple lithology, diffusive model in stratigraphic modeling, in: J. W. Harbaugh, W. L. Watney, E. C. Rankey, R. Slingerland, R. H. Goldstein \& E. K. Franseen eds. Numerical Experiments in Stratigraphy: Recent Advances in Stratigraphic and Sedimentological Computer Simulations, \textit{vol. 62}, \textit{SEPM Spec. Pub.}, Tulsa Ok, pp. 197--210.
+
 \bibitem[{\textit{Grant and Madsen}(1979)}]{Grant79}
 Grant, W. D., and O. S. Madsen (1979), Combined wave and current interaction with a rough bottom, \textit{J. Geophys. Res.}, \textit{84(C4)}, 1797--1808, doi:10.1029/JC084iC04p01797.
 
 \bibitem[{\textit{Grasmeijer and Ruessink}(2003)}]{Grasmeijer03}
 Grasmeijer, B. T., and B. G.Ruessink (2003), Modeling of waves and currents in the nearshore: parametric vs. probabilistic approach, \textit{Coastal Engineering}, \textit{49}, 185--207.
 
+\bibitem[{\textit{Griffiths et al.}(2001)}]{Griffiths01}
+Griffiths, C. M., C. Dyt, E. Paraschivoiu, and K. Liu (2001), Sedsim in Hydrocarbon Exploration, in: D. Merriam \& J. C. Davis, (eds.), \textit{Geologic Modeling and Simulation}: Kluwer Academic, New York, p. 71--97.
+
 \bibitem[{\textit{Hamner and Wolanski}(1988)}]{Hamner88}
 Hamner, W., and E. Wolanski (1988), Hydrodynamic forcing functions and biological processes on coral reefs: a status review, \textit{In Proceedings of the 6th International Coral Reef Symposium, Vol. 1: Plenary Addresses and Status Review, ed. JH Choat, D Barnes, MA Borowitzka, JC Coll, PJ Davies, et al.}, pp. 103--13. Townsville, Aust.: Int. Coral Reef Symp. Exec. Comm.
 \bibitem[{\textit{Haq et al.}(1987)}]{Haq87}
 Haq, B. U., J. Hardenbol, and P. R. Vail (1987), Chronology of fluctuating sea levels since the Triassic (250 million years ago to present), \textit{Science}, \textit{235}, 1156--1167.
+
+\bibitem[{\textit{Hasler et al.}(2008)}]{Hasler08}
+Hasler, C. A., E. W. Adams, R. A. Wood, and J. A. D. Dickson (2008), Fine scale forward modelling of a Devonian patch reef, Canning Basin, Western Australia, in: de Boer, et al. (Eds.), Analogue and Numerical Modelling of Sedimentary Systems: From Understanding to Prediction, Special Publication 40, IAS, Wiley-Blackwell 328.
 
 \bibitem[{\textit{Hasselmann et al.}(1973)}]{Hasselmann73}
 Hasselmann, K., et al. (1973), Measurements of wind-wave growth and swell decay during the Joint North Sea Wave Project (JONSWAP), \textit{Dtsch. HydrogrZ. 2}, Suppl., 1 (A8), 1--95.
@@ -545,8 +571,14 @@ Hill, J. (2006), Modelling of reefs and shallow marine carbonates, \textit{Ph.D.
 \bibitem[{\textit{Holthuijsen et~al.}(1993)}]{Holthuijsen93}
 Holthuijsen L.~H, N. Booij, and R.~C. Ris (1993), A spectral wave model for the coastal zone, \textit{Proceedings of the 2nd international symposium on ocean wave measurement and analysis}, \textit{New Orleans, LA}, pp. 630--641.
 
+\bibitem[{\textit{Huang et~al.}(2015)}]{Huang15}
+Huang, X. , C. M. Griffiths, and J. Liu (2015), Recent development in stratigraphic forward modelling and its application in petroleum exploration, \textit{Australian Journal of Earth Sciences}, \textit{62}, 8, 903--919, doi:10.1080/08120099.2015.1125389.
+
 \bibitem[{\textit{Isobe and  Horikawa}(1982)}]{Isobe82}
 Isobe, M., and K. Horikawa (1982), Study on water particle velocities of shoaling and breaking waves,  \textit{Coast. Eng. in Japan},  \textit{25}, 109--123.
+
+\bibitem[{\textit{James and Kendall}(1992)}]{James92}
+James, N. P., and A. C. Kendall (1992), Introduction to carbonate and evaporite facies models, in: Facies Models. Response to sea-level change, Ed. by R. G. Walker \& N. P. James), \textit{Geol. Ass. Canada}, 265--275.
 
 \bibitem[{\textit{Jonsson}(1966)}]{Jonsson66}
 Jonsson, I. G. (1966), Wave boundary layer and friction factors. \textit{Coastal Eng. Conf.}, \textit{1(10)}, 125--148.
@@ -556,6 +588,9 @@ Kaandorp, J.A., E. A. Koopman, P. M. Sloot, R. P. Bak, M. J. Vermeij, and L. E. 
 
 \bibitem[{\textit{Kobayashi et al.}(1998)}]{Kobayashi98}
 Kobayashi, N., M. N. Herrman, B. D. Johnson, and M. D. Orzech (1998), Probability distribution of surface elevations in surf and swash zones, \textit{J. Waterway, Port, Coastal, and Ocean Eng.}, \textit{124}, (3), 99--107.
+
+\bibitem[{\textit{Kolodka et al.}(2016)}]{Kolodka16}
+Kolodka, C., E. Vennin, R. Bourillot, D. Granjeon, and G. Desaubliaux (2016), Stratigraphic modelling of platform architecture and carbonate production: a Messinian case study (Sorbas Basin, SE Spain), \textit{Basin Research}, \textit{28}, 658--684, doi:10.1111/bre.12125.
 
 \bibitem[{\textit{Kamphuis}(1975)}]{Kamphuis75}
 Kamphuis, J. (1975), Friction factor under oscillatory waves, \textit{J. Waterw. Harbors Coastal Eng. Div. ASCE}, \textit{101}, 135--144.
@@ -622,6 +657,9 @@ Nordlund, U. (1999), FUZZIM: Forward stratigraphic modeling made simple, \textit
 \bibitem[{\textit{Parcell et al.}(1998)}]{Parcell98}
 Parcell, W. C., E. A. Mancini, D. J. Benson, H. Chen, and W. Yang (1998), Geological and computer modeling of 2-D and 3-D carbonate lithofacies trends in the Upper Jurassic Oxfordian, Smackover Formation, Northeastern Gulf Coast, \textit{Abstr. Programs - Geol. Soc. Am. Annu. Meet.}, \textit{30}, A338.
 
+\bibitem[{\textit{Parcell}(2003)}]{Parcell03}
+Parcell, W. C. (2003), Evaluating the development of Upper Jurassic reefs in the Smackover Formation, Eastern Gulf Coast, USA through fuzzy logic computer modeling, \textit{J. Sed. Res.}, \textit{73}, 498--515.
+
 \bibitem[{\textit{Pomeroy et al.}(2012)}]{Pomeroy12}
 Pomeroy A., R. J. Lowe, G. Symonds, A. van Dongeren,  and C. Moore (2012), The dynamics of infragravity wave transformation over a fringing reef, \textit{J. Geophys. Res.}, \textit{117}, C11022.
 \bibitem[{\textit{Prager et al.}(1996)}]{Prager96}
@@ -650,6 +688,9 @@ Ruessink, B. G., J. R. Miles, F. Feddersen, R. T. Guza, and S. Elgar (2001), Mod
 \bibitem[{\textit{Salles et al.}(2011)}]{Salles11}
 Salles, T., C. Griffiths, C. Dyt, and F. Li (2011), Australian shelf sediment transport responses to climate change-driven ocean perturbations. \textit{Marine Geology}, \textit{282}, (3-4), 268--274.
 
+\bibitem[{\textit{Seard et al.}(2013)}]{Seard13}
+Seard, C., J. Borgomano, D. Granjeon, and G. Camoin (2013), Impact of environmental parameters on coral reef development and drowning: forward modeling of the last deglacial reefs from Tahiti (French Polynesia; IODP Expedition \#310), \textit{Sedimentology}, doi:10.1111/sed.12030.
+
 \bibitem[{\textit{Shaw et al.}(2012)}]{Shaw12}
 Shaw, E. C., B. I. McNeil, and B. Tilbrook (2012), Impacts of ocean acidification in naturally variable coral reef flat ecosystems, \textit{J. Geophys. Res.}, \textit{117}, C03038.
 
@@ -676,14 +717,26 @@ Swart, D. H. (1974), Offshore sediment transport and equilibrium beach profiles,
 \bibitem[{\textit{Taebi et al.}(2011)}]{Taebi11}
 Taebi, S., R. J. Lowe, C. B. Pattiaratchi, G. N. Ivey,  G. Symonds, and R. Brinkman (2011), Nearshore circulation in atropical fringing reef system, \textit{J. Geophys. Res.}, \textit{116}, C02016.
 
+\bibitem[{\textit{Tetzlaff}(2005)}]{Tetzlaff05}
+Tetzlaff, D. (2005), Modelling Coastal Sedimentation through Geologic Time, \textit{J. of Coastal Res.}, \textit{21}, 610--617.
+
+\bibitem[{\textit{Toomey et al.}(2016)}]{Toomey16}
+Toomey, M. R., A. D. Ashton, M. E. Raymo, and J. T. Perron (2016), Late Cenozoic sea level and the rise of modern rimmed atolls, \textit{Palaeogeogr. Palaeoclimatol. Palaeoecol.}, \textit{451}, 73--83.
+
 \bibitem[{\textit{Van Woesik et al.}(2015)}]{VanWoesik15}
 Van Woesik, R., Y. Golbuu, and G. Roff (2015), Keep up or drown: adjustment of western Pacific coral reefs to sea-level rise in the 21st century, \textit{Royal Society Open Science}, \textit{2}, (7), doi:10.1098/rsos.150181.
 
 \bibitem[{\textit{Vetter et al.}(2010)}]{Vetter10}
 Vetter, O., J. M. Becker, M. A. Merrifield, A.-C. P\'equignet, J. Aucan, S. J. Boc, and C. E. Pollock (2010), Wave setup over a Pacific Island fringing reef, \textit{J. Geophys. Res.}, \textit{115}, C12066, doi:10.1029/2010JC006455.
 
+\bibitem[{\textit{Warrlich et al.}(2002)}]{Warrlich02}
+Warrlich, G. M. D., D. A. Waltham, and D. W. J. Bosence (2002), Quantifying the sequence stratigraphy and drowning mechanisms of atolls using a new forward modeling program (CARBONATE 3-D), \textit{Basin Res.}, \textit{14}, 379--400.
+
 \bibitem[{\textit{Warner et al.}(2008)}]{Warner08}
 Warner, J. C., C. R. Sherwood, R. P. Signell, C. Harris, and H. G. Arango (2008), Development of a three-dimensional, regional, coupled wave, current, and sediment-transport model, \textit{Computers and Geosciences}, \textit{34}, 1284--1306.
+
+\bibitem[{\textit{Williams et al.}(2011)}]{Williams11}
+Williams, H. D., P. M. Burgess, V. P. Wright, G. Della Porta, and D. Granjeon (2011), Investigating carbonate platform types: Multiple controls and a continuum of geometries, \textit{J. Sed. Res.}, \textit{81}, 18--37.
 
 \bibitem[{\textit{Young}(1989)}]{Young89}
 Young, I. R. (1989), Wave transformation over coral reefs, \textit{J. Geophys. Res.}, \textit{94(C7)}, 9779--9789, doi:10.1029/JC094iC07p09779.
