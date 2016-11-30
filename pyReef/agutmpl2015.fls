@@ -112,6 +112,9 @@ INPUT ./figs/fig2.pdf
 INPUT figs/fig3.pdf
 INPUT ./figs/fig3.pdf
 INPUT ./figs/fig3.pdf
+INPUT figs/fig4.pdf
+INPUT ./figs/fig4.pdf
+INPUT ./figs/fig4.pdf
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
 INPUT /usr/local/texlive/2015/texmf-dist/fonts/tfm/public/cm/cmti8.tfm
 INPUT agutmpl2015.aux

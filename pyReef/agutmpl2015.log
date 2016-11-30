@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.16)  30 NOV 2016 16:40
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.10.16)  30 NOV 2016 20:37
 entering extended mode
  restricted \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **agutmpl2015.tex
 (./agutmpl2015.tex
@@ -183,40 +184,31 @@ LaTeX Info: Redefining \cite on input line 7664.
 \c@NAT@ctr=\count130
 ) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
 Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks15
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
 Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
 File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
 )
 Package graphics Info: Driver file: pdftex.def on input line 94.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count131
 ))
 \Gin@req@height=\dimen151
 \Gin@req@width=\dimen152
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amssymb.sty
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks16
 \symAMSa=\mathgroup4
@@ -243,8 +235,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 119.
 LaTeX Font Info:    ... okay on input line 119.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 119.
 LaTeX Font Info:    ... okay on input line 119.
-
-(/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count132
 \scratchdimen=\dimen153
@@ -258,14 +249,11 @@ LaTeX Font Info:    ... okay on input line 119.
 \makeMPintoPDFobject=\count137
 \everyMPtoPDFconversion=\toks18
 ) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
-)
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -273,23 +261,17 @@ Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
-)
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+)) (/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+ (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 Package etexcmds Info: Could not find \expanded.
 (etexcmds)             That can mean that you are not using pdfTeX 1.50 or
@@ -297,22 +279,17 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
-G,.JBIG2,.JB2,.eps]
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
-File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
-e
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    Try loading font information for U+msa on input line 207.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 207.
-
-(/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
+ (/usr/local/texlive/2015/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 \figandtabbox0=\box57
@@ -320,8 +297,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 ]
 \figandtabbox1=\box58
-
-<figs/fig1.pdf, id=13, 895.15771pt x 382.74983pt>
+ <figs/fig1.pdf, id=13, 895.15771pt x 382.74983pt>
 File: figs/fig1.pdf Graphic file (type pdf)
  <use figs/fig1.pdf>
 Package pdftex.def Info: figs/fig1.pdf used on input line 247.
@@ -333,77 +309,64 @@ File: figs/fig2.pdf Graphic file (type pdf)
  <use figs/fig2.pdf>
 Package pdftex.def Info: figs/fig2.pdf used on input line 286.
 (pdftex.def)             Requested size: 456.0pt x 354.66068pt.
- [2 <./figs/fig1.pdf>] [3 <./figs/fig2.pdf>]
-\dblfigandtabbox2=\box60
+ [2 <./figs/fig1.pdf>]
+Overfull \vbox (1.0pt too high) has occurred while \output is active []
 
-<figs/fig3.pdf, id=104, 1016.39655pt x 733.13658pt>
+ [3 <./figs/fig2.pdf>]
+\dblfigandtabbox2=\box60
+ <figs/fig3.pdf, id=104, 1016.39655pt x 733.13658pt>
 File: figs/fig3.pdf Graphic file (type pdf)
  <use figs/fig3.pdf>
 Package pdftex.def Info: figs/fig3.pdf used on input line 325.
 (pdftex.def)             Requested size: 444.0pt x 320.26544pt.
-
-[4]
-Overfull \vbox (1.0pt too high) has occurred while \output is active []
+ [4]
+Overfull \vbox (1.00002pt too high) has occurred while \output is active []
 
  [5 <./figs/fig3.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 378--382
-
- []
-
+\figandtabbox2=\box61
+ <figs/fig4.pdf, id=508, 565.04521pt x 768.19559pt>
+File: figs/fig4.pdf Graphic file (type pdf)
+ <use figs/fig4.pdf>
+Package pdftex.def Info: figs/fig4.pdf used on input line 382.
+(pdftex.def)             Requested size: 240.0pt x 326.2854pt.
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
-[6] [7]
+ [6 <./figs/fig4.pdf>] [7]
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no ” in font cmr8!
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
-
-Underfull \hbox (badness 10000) in paragraph at lines 749--750
+ [8]
+Underfull \hbox (badness 10000) in paragraph at lines 759--760
 []\OT1/cmr/m/n/8 Young, I. R. (1989), Wave trans-for-ma-tion over
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 749--750
-\OT1/cmr/m/n/8 coral reefs, \OT1/cmr/m/it/8 J. Geo-phys. Res.\OT1/cmr/m/n/8 , \
-OT1/cmr/m/it/8 94(C7)\OT1/cmr/m/n/8 , 9779--9789,
+Underfull \hbox (badness 10000) in paragraph at lines 759--760
+\OT1/cmr/m/n/8 coral reefs, \OT1/cmr/m/it/8 J. Geo-phys. Res.\OT1/cmr/m/n/8 , \OT1/cmr/m/it/8 94(C7)\OT1/cmr/m/n/8 , 9779--9789,
  []
 
 Missing character: There is no â in font cmr8!
 Missing character: There is no € in font cmr8!
 Missing character: There is no “ in font cmr8!
-[8] (./agutmpl2015.aux) ) 
+[9] (./agutmpl2015.aux) ) 
 Here is how much of TeX's memory you used:
- 2820 strings out of 493089
- 36781 string characters out of 6134841
- 142278 words of memory out of 5000000
- 6287 multiletter control sequences out of 15000+600000
+ 2836 strings out of 493089
+ 36991 string characters out of 6134841
+ 130757 words of memory out of 5000000
+ 6302 multiletter control sequences out of 15000+600000
  16511 words of font info for 61 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,10n,27p,1956b,539s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsf
-onts/cmextra/cmex9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.p
-fb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pf
-b></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></
-usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></us
-r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
-Output written on agutmpl2015.pdf (8 pages, 16382066 bytes).
+ 37i,10n,28p,1956b,612s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmti9.pfb>
+Output written on agutmpl2015.pdf (9 pages, 16414424 bytes).
 PDF statistics:
- 575 PDF objects out of 1000 (max. 8388607)
- 384 compressed objects within 4 object streams
+ 606 PDF objects out of 1000 (max. 8388607)
+ 405 compressed objects within 5 object streams
  0 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
